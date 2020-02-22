@@ -54,6 +54,10 @@ module.exports = {
                 test: /\.css$/,
                 use: cssCompile()
             },
+            {
+                test: /\.(ttf|svg|ttf|eof)$/,
+                loader: 'file-loader'
+            },
         ]
     },
 
