@@ -1,20 +1,65 @@
  @font-face {
     font-family: 'Quicksand';
+    font-family: 'Montserrat';
     src: url('../fonts/quicksand.ttf') format('truetype');
+    src: url('../fonts/montserrat.ttf') format('truetype');
 
-} 
+}
 
 
 body {
-    .main{
-        margin: 145px 191px 145px 149.74px;
+    min-width: 1170px;
+    margin: 145px 191px 145px 149.74px;
+     
+     .sign{
+        border: 3px solid rgba(31, 32, 65, 0.25);
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        left: 30px;
+        top: 30px;
+        border-radius: 50%;
 
-        &-leftblock{
-            width:269.26px;
+
+        &_vector1{
+            position: absolute;
+            right:12px;
+            top: 15px;
+             border-top: 3px solid rgba(31, 32, 65, 0.25); 
+             border-left: 3px solid rgba(31, 32, 65, 0.25); 
+            border-radius: 360px 0 0 0;
+            height: 5px;
+            padding-bottom: -1px;
+            width: 8px;
+            
+
+        }
+
+        &_vector2{
+            position: absolute;
+            right:23px;
+            top: 15px;
+            border-top: 3px solid rgba(31, 32, 65, 0.25);
+            border-radius: 0 360px 0 0;
+            border-right: 3px solid rgba(31, 32, 65, 0.25);
+            height: 13px;
+            padding-top: 1px;
+            width: 11px;
+            
+
+        }
+        
+     }   
+
+     .main {
+
+       &-leftblock{
+            width:270px;
             height:610px;
             display: flex;
             justify-content: space-between;
             flex-direction:column;
+            
            
     
                        
@@ -36,7 +81,7 @@ body {
              
             
                 &__text{
-                    width: 159px;
+                    width: 169px;
                     height: 57px;
                     margin-bottom: 33px;
                 
@@ -44,7 +89,7 @@ body {
                         font-family: 'Quicksand';
                         font-weight: bold;
                         color: #1F2041;
-                        font-size: 1.1em;
+                        font-style: normal;
                         line-height: 29px; 
                         margin-bottom: 10px;                       
                     }    
@@ -58,5 +103,45 @@ body {
             } 
 
         }
-    }
-}
+
+        &-rightblock {
+            position: absolute;
+            display: flex;
+            flex-direction:column;
+            right: 145px;
+            top: 191px;
+            width: 402px;
+            height: 321px;
+            
+
+                  &__block{
+                      width: 400px;
+                      height: 55px;
+                      display: flex;
+                      margin-bottom: 55px;
+
+                        &_h{
+                            height: 30px;
+                            width: 30px;
+                            margin-top: 4px;
+                            margin-left: 8px;
+                            font-weight: normal;
+                            font-family: 'Montserrat';
+                            color: rgba(31, 32, 65, 0.25);
+                            
+                           
+                        }
+
+                        &_sp{
+                           vertical-align: top;
+                           font-size: 24px;
+                           margin-left: 67px;
+                           font-family: 'Quicksand';
+                           font-weight: bold;
+                        }
+                  }
+                }
+
+                    
+        } 
+    }   

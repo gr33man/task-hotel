@@ -2,9 +2,12 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=1170")
         title Document
     body
+        div.sign
+            div.sign_vector1
+            div.sign_vector2
         div.main
             div.main-leftblock
                 each col in ['#1F2041', 'rgba(31, 32, 65, 0.75)','rgba(31, 32, 65, 0.5)','rgba(31, 32, 65, 0.25)','rgba(31, 32, 65, 0.05)','#BC9CFF','#6FCF97']
@@ -14,9 +17,28 @@ html(lang="en")
                         div.content__text
                             span.content__text_font DARK SHADE 100% 
                             span.content__text_font <span style="font-weight:500">#1F2041</span>
+            div.main-rightblock
+                div.main-rightblock__block
+                    h1.main-rightblock__block_h H1
+                    span.main-rightblock__block_sp This one is the sub-section or widget title
+                div.main-rightblock__block
+                    h2.main-rightblock__block_h H2
+                    span.main-rightblock__block_sp(style="font-size:19px") This one is the sub-section or widget title
+                div.main-rightblock__block
+                    h3.main-rightblock__block_h H3
+                    span.main-rightblock__block_sp(style="font-size:12px;font-family:'Montserrat'") This one is the sub-section or widget title
+                div.main-rightblock__block
+                    p.main-rightblock__block_h body
+                    span.main-rightblock__block_sp(style="font-size:12px;font-family:'Montserrat'") This is the body text which is used for most of the design, like paragraphs, lists, etc.    
+                
+
                     
-                      
-                       
+                  
+                     
+
+                    
+                     
+                    
 
                     
                     
