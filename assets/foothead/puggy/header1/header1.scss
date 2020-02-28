@@ -1,0 +1,112 @@
+
+
+    %fone {
+        box-shadow: 0 0 1px;
+        background: #FFFFFF;
+    }
+    
+    
+
+    .header{
+        height: 70px;
+        margin-top: 150px;
+        padding: 0 140px;
+        box-sizing: border-box;
+        @extend %fone;
+        display: flex;
+
+        .toxic {
+            margin: 12px 0;
+        }    
+        
+        @import "../../../sign/toxin.scss";
+        
+
+        @media (max-width: 1639px) {
+            .toxic {
+               margin-right: -85px;
+            }
+            .bar {
+                .bar__el {
+                    font-size: 16px;
+                }
+            }
+
+            .btn {
+                
+               .btn__log {
+                   margin-right: 8px;
+               }
+               
+            }
+        } 
+      
+
+        .bar {
+            display: flex;
+            width: 527px;
+            justify-content: space-between;
+            margin-top: 26px;
+            margin-left: 277.31px;
+            
+            
+            
+    
+           
+        
+
+            &__el {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-size: 14px; 
+                
+            }
+
+            &__el a {
+                text-decoration: none;
+                color: rgba(31, 32, 65, 0.5);
+            }
+        }
+        
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            width: 190px;
+            margin-left: 30px;
+            height: 34px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+
+
+            &__log {
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 12px;
+                border-radius: 22px;
+                border:2px solid #BC9CFF;
+                background-color: #FFFFFF;
+                color: #BC9CFF;
+                outline: none;
+                width: 79px;
+            }
+
+            &__reg {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                color: #FFFFFF;
+                border: 1px solid #BC9CFF;
+                background-color:#BC9CFF;
+                border-radius: 22px;
+                width: 101px;
+                outline: none;
+            }
+
+        }
+
+    
+    } 
+    
+    
+    

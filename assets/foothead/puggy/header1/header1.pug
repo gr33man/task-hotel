@@ -1,4 +1,19 @@
-
-
-
+header.header
+    div.toxic
+        include ../../../sign/toxin.pug
+        -var arr =['Home','About Us','Service' ,'Careers', 'News', 'Documentation']
+    nav.bar
+        each list in arr
+            if list=='Home'
+                div.bar__el(style="font-weight:bold;")
+                    a(href="#" style="color: rgba(31, 32, 65, 0.75)")= list
+            else if list=="Service"
+                 div.bar__el
+                    a(href="#")= list
+            else
+                div.bar__el
+                    a(href="#")= list 
+    div.btn
+        button.btn__log LOGIN
+        button.btn__reg  REGISTER              
     

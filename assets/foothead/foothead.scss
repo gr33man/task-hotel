@@ -1,1 +1,12 @@
-@import "../sign/sign.scss";
+body{
+    margin:0;
+    background: #E5E5E5;
+    min-width: 1170px;
+
+    @import "../sign/sign.scss";
+
+    @import "./puggy/header1/header1.scss";
+        
+    
+   
+}
