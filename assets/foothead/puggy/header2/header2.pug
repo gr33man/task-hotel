@@ -1,0 +1,20 @@
+header.header2
+    div.toxic2
+        include ../../../sign/toxin.pug
+        -var arr =['Home','About Us','Service' ,'Careers', 'News', 'Documentation']
+    nav.bar2
+        each list in arr
+            if list=='Home'
+                div.bar2__el2(style="font-weight:bold;")
+                    a(href="#" style="color: rgba(31, 32, 65, 0.75)")= list
+            else if list=="Service"
+                 div.bar2__el2
+                    a(href="#" style="position:relative;")= list
+                        <i class="material-icons">expand_more</i>
+                          
+            else
+                div.bar2__el2
+                    a(href="#")= list 
+    div.stick
+    div.words
+        p Cosmin Negoita       

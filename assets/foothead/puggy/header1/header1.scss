@@ -7,15 +7,16 @@
     
     
 
-    .header{
+    .header1{
         height: 70px;
         margin-top: 150px;
         padding: 0 140px;
         box-sizing: border-box;
         @extend %fone;
         display: flex;
+        
 
-        .toxic {
+        .toxic1 {
             margin: 12px 0;
         }    
         
@@ -23,18 +24,20 @@
         
 
         @media (max-width: 1639px) {
-            .toxic {
-               margin-right: -85px;
+            .toxic1 {
+               margin-right: -200px;
             }
-            .bar {
-                .bar__el {
-                    font-size: 16px;
+            .bar1 {
+                
+                .bar1__el1 {
+                    font-size: 14px;
+                    margin-right: -115px;
                 }
             }
 
-            .btn {
+            .btn1 {
                 
-               .btn__log {
+               .btn1__log1 {
                    margin-right: 8px;
                }
                
@@ -42,43 +45,47 @@
         } 
       
 
-        .bar {
+        .bar1 {
             display: flex;
-            width: 527px;
+            width: 647px;
             justify-content: space-between;
             margin-top: 26px;
             margin-left: 277.31px;
-            
-            
-            
-    
            
-        
 
-            &__el {
+            &__el1 {
                 font-family: 'Montserrat';
                 font-style: normal;
-                font-size: 14px; 
+                font-size: 18px; 
                 
             }
 
-            &__el a {
+            i {
+                font-family: 'Material Icons';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                position: absolute;
+                bottom: -5px;
+            }
+
+            &__el1 a {
                 text-decoration: none;
                 color: rgba(31, 32, 65, 0.5);
             }
         }
         
-        .btn {
+        .btn1 {
             display: flex;
             justify-content: space-between;
             width: 190px;
-            margin-left: 30px;
+            margin-left: 180px;
             height: 34px;
             margin-top: 18px;
             margin-bottom: 18px;
 
 
-            &__log {
+            &__log1 {
                 font-family: 'Montserrat';
                 font-weight: bold;
                 font-size: 12px;
@@ -90,7 +97,7 @@
                 width: 79px;
             }
 
-            &__reg {
+            &__reg1 {
                 font-family: 'Montserrat';
                 font-style: normal;
                 font-weight: bold;

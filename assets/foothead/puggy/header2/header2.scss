@@ -1,0 +1,101 @@
+
+
+    %fone {
+        box-shadow: 0 0 1px;
+        background: #FFFFFF;
+    }
+    
+    
+
+    .header2{
+        height: 70px;
+        margin-top:40px;
+        padding: 0 140px;
+        box-sizing: border-box;
+        @extend %fone;
+        display: flex;
+
+        .toxic2 {
+            margin: 12px 0;
+        }    
+        
+        @import "../../../sign/toxin.scss";
+        
+
+        @media (max-width: 1639px) {
+            .toxic2 {
+               margin-right: -200px;
+            }
+            .bar2 {
+         
+                .bar2__el2 {
+                    font-size: 14px;
+                    margin-right: -40px;
+                }
+            }
+       
+
+        .words p {
+           font-size:14px;
+           width: 100px;
+        }
+
+        } 
+      
+
+        .bar2 {
+            display: flex;
+            width: 647px;
+            justify-content: space-between;
+            margin-top: 26px;
+            margin-left: 327.31px;
+           
+
+            &__el2 {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-size: 18px; 
+                
+            }
+
+            i {
+                font-family: 'Material Icons';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                position: absolute;
+                bottom: -5px;
+                
+            }
+
+            &__el2 a {
+                text-decoration: none;
+                color: rgba(31, 32, 65, 0.5);
+            }
+        }
+
+        .stick {
+            width: 2px;
+            height: 30px;
+            background: rgba(31, 32, 65, 0.1);
+            margin: auto  0 auto 90px;
+
+        }
+
+       
+
+        .words  {
+            margin: auto  0 auto 90px;
+            color: rgba(31, 32, 65, 0.5);
+            font-family: 'Montserrat';
+            font-size: 18px;
+            
+           
+        }
+        
+        
+    
+    } 
+    
+    
+    
