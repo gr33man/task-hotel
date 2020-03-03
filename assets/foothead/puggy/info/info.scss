@@ -1,0 +1,175 @@
+%block {
+    position: absolute;
+    width: 81px;
+    height: 168px;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+}
+
+%block_el{
+    font-family:'Montserrat';
+    font-size: 14px;
+    line-height: 17px;
+    
+}
+
+%link_a{
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.5);
+}
+
+
+@media (max-width:1639px) {
+    .footer1 {
+
+  
+
+        .navigation{
+            margin-left: -60px;
+            
+        }
+        .about {
+           margin-left: -120px;
+           
+        }
+        .support {
+            margin-left: -180px;
+             
+         }
+
+         .postup {
+            margin-left: -250px;
+            
+            
+         }
+    }
+
+   }   
+
+.footer1 {
+    margin-top: 40px;
+    position: relative;
+    height: 372px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+
+    
+    .emblem {
+        width: 260px;
+        height: 156px;
+        position: absolute;
+        left: 140px;
+        top:100px;
+        
+       
+        &__tox{
+            @import "../../../sign/toxin.scss";
+        }
+
+        .emblem p {
+            font-family: 'Montserrat';
+            width: 260px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    
+
+    .navigation {
+       @extend %block;
+       left: 540px;
+    }
+
+    .about {
+        @extend %block; 
+        left: 740px;
+        top: 104px; 
+        width: 82px;
+        height: 168px; 
+    }
+
+    .support {
+        @extend %block; 
+        left: 940px;
+        top: 104px; 
+        height: 130px;
+        width: 113px;
+
+    }
+
+    .postup{
+        width: 260px;
+        height: 142px;
+        left: 1140px;
+        top: 104px; 
+        position: absolute;
+       
+        .blocktext {
+            position: relative;
+            top: 0;
+            width: 208px;
+            height: 84px;
+           
+            &__title {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                text-transform: uppercase;
+                color: #1F2041;
+            }
+            &__infotext pre {
+                font-family: 'Montserrat';
+                font-size: 14px;
+                line-height: 24px;
+                 margin-top: 21px;
+                 color: rgba(31, 32, 65, 0.75);
+            }
+        }    
+
+        &__input {
+            height: 44px;
+            width: 258px;
+            margin-top: 20px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 4px;
+              
+        }
+
+        &__input::placeholder{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            padding-left: 2px;
+            color: rgba(31, 32, 65, 0.25);
+        }
+
+        & a i {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            bottom: -16px;
+            left: 227px;
+            color: #BC9CFF;
+            font-size: 24px;
+        }
+
+        
+        
+    }
+
+
+    .menu {
+        @extend %block_el;
+
+        & a{
+            @extend %link_a;
+        } 
+     }
+}

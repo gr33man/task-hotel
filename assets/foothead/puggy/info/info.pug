@@ -1,0 +1,39 @@
+mixin checklist(one, ...elems)
+    each elem in elems
+        if elem == one
+            div.menu(style="font-weight: bold; color: #1F2041;font-size: 12px;line-height: 15px;")= elem
+                
+        else  
+            div.menu
+                a(href="#")= elem   
+
+    
+footer.footer1
+    div.emblem
+        div.emblem__tox
+            include ../../../sign/toxin.pug
+            p 
+                <pre>
+                     |Lorem ipsum dolor sit amet 
+                     |consectetur adipiscing elit aliquam
+                     | eget nullam pellentesque aliquam
+                     | curabitur cociis
+                </pre>
+    div.navigation
+        +checklist('NAVIGATION', 'NAVIGATION','About us','News','Support','Poducts')
+    div.about
+         +checklist('ABOUT US', 'ABOUT US','Who we are','Our team','Careers','Investors')
+    div.support
+         +checklist('SUPPORT', 'SUPPORT','Communication','Our team','Get in touch')
+    div.postup
+        div.blocktext
+            span.blocktext__title Subscribe to our newsletter
+            span.blocktext__infotext
+                pre
+                    |Receive our latest news and 
+                    |promotions in your inbox! 
+        input.postup__input(type="text" placeholder="Your email address")
+        a(href="#") <i class="material-icons">arrow_forward</i>                 
+        
+           
+    
