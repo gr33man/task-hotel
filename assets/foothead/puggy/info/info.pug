@@ -1,24 +1,29 @@
 mixin checklist(one, ...elems)
     each elem in elems
         if elem == one
-            div.menu(style="font-weight: bold; color: #1F2041;font-size: 12px;line-height: 15px;")= elem
+            div.menu(style="font-weight:700;color: #1F2041;font-size: 12px;line-height: 15px;")= elem
                 
         else  
             div.menu
                 a(href="#")= elem   
 
+mixin feedback
+    a(href="#") <i class="fa fa-twitter" aria-hidden="true"></i>
+    a(href="#") <i class="fa fa-facebook-official" aria-hidden="true"></i>
+    a(href="#") <i class="fa fa-instagram" aria-hidden="true"></i>
+            
     
 footer.footer1
     div.emblem
         div.emblem__tox
             include ../../../sign/toxin.pug
             p 
-                <pre>
+                pre
                      |Lorem ipsum dolor sit amet 
                      |consectetur adipiscing elit aliquam
                      | eget nullam pellentesque aliquam
                      | curabitur cociis
-                </pre>
+                
     div.navigation
         +checklist('NAVIGATION', 'NAVIGATION','About us','News','Support','Poducts')
     div.about
@@ -33,7 +38,13 @@ footer.footer1
                     |Receive our latest news and 
                     |promotions in your inbox! 
         input.postup__input(type="text" placeholder="Your email address")
-        a(href="#") <i class="material-icons">arrow_forward</i>                 
-        
-           
+        a(href="#") <i class="material-icons">arrow_forward</i>                       
+    div.links  
+        p Copyright © 2018 Toxin UI Kit. All rights reserved.
+            div.links__icons
+                +feedback
+                
+                    
+            
+ 
     

@@ -1,0 +1,55 @@
+.tagline {
+    height: 367px;
+    margin-top: 40px;
+    margin-bottom: 140px;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    background: #FFFFFF;
+    margin-bottom: 130px;
+
+    @media (max-width:1639px) {
+        .centerblock {
+            margin-left: -85px;
+        }
+    }
+    
+    .centerblock {
+       height: 150px;
+       width: 560px;
+       position: relative;
+       left: 35%;
+       top: 100px;
+      
+     
+
+
+       &__signtoxy{
+        @import "../../../sign/toxin.scss";
+        position: relative;
+        left: 42%;
+       }
+
+       &__tag {
+           font-family: 'Montserrat';
+           font-size: 16px;
+           text-align: center;
+           width: 560px;
+           height: 48px;
+           color: rgba(31, 32, 65, 0.75);  
+          
+       }
+       
+       &__feed {
+        top: 120px;
+        right: 220px;
+        @extend %icons;
+       }
+
+       &__feed a {
+        color:#BC9CFF;
+       }
+
+       &__feed a:hover {
+        font-size: 26px;
+       }
+    }
+}
