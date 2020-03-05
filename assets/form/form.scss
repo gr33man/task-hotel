@@ -1,0 +1,55 @@
+@import "../sign/sign.scss";
+@font-face {
+    font-family: 'Quicksand';
+    font-family: 'Montserrat';
+    src: url('../fonts/quicksand.ttf') format('truetype');
+    src: url('../fonts/montserrat.ttf') format('truetype');
+
+}
+
+body {
+    
+    .container{
+        width: 320px;
+        height: 308px;
+        position: absolute;
+        left: 141px;
+        top: 163px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        
+
+        .boxinp {
+            height: 67px;
+            width: 320px;
+            position: relative;
+
+            .boxinp__input{
+                margin-top: 5px;
+                @import "./elements/input/input.scss";
+            }
+
+            .boxinp__text {
+                position: relative;
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                text-transform: uppercase;
+            }
+
+            .boxinp__content {
+                position: absolute;
+                right: 0;
+                top: 3px;
+                font-family: 'Montserrat';
+                font-size: 12px;
+                line-height: 15px;
+                text-transform: uppercase;
+                color: rgba(31, 32, 65, 0.5);
+            }
+        }
+    }
+}

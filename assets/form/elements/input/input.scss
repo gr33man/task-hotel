@@ -1,0 +1,36 @@
+.grey::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+}
+
+.black::placeholder{
+    color: rgba(31, 32, 65, 0.75); 
+}
+
+.inp {
+    width: 320px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.inp::placeholder{
+    font-size: 14px;
+    font-style: 'Montserrat';
+    padding-left: 5px;
+
+}
+
+
+.dropblock{
+    @extend .inp;
+    cursor:pointer;
+
+    & i{
+        margin-left: 285px;
+        margin-top: 8px;
+        font-size: 24px;
+        color: rgba(31, 32, 65, 0.5);    
+    }
+}

@@ -33,7 +33,7 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        col: './foothead/foothead.js'
+        col: './form/form.js'
 
     },
     output: {
@@ -73,7 +73,7 @@ module.exports = {
 
     plugins: [
         new Html({
-            template: './foothead/foothead.pug',
+            template: './form/form.pug',
             minify: {
                 collapseWhitespace: isProd
             }

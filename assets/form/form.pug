@@ -1,0 +1,33 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=1170")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        script(src="https://use.fontawesome.com/ff88c31cb5.js")
+        title forms
+    body
+        include ./elements/input/input.pug
+        include ../sign/sign.pug
+        mixin inpCont(text,content,placeholder,atr, kind)
+            div.boxinp
+                span.boxinp__text= text
+                span.boxinp__content= content
+                div.boxinp__input
+                    +inpText(placeholder,kind)(class=atr)   
+        
+        mixin dropCont(text,content)
+            div.boxinp
+                span.boxinp__text= text
+                span.boxinp__content= content
+                div.boxinp__input
+                    +dropdown   
+
+
+        div.container  
+            +inpCont('text field','default','Email','grey') 
+            +inpCont('text field','hover/focus','This is pretty awesome','black')
+            +dropCont('dropdown', 'default')
+            +inpCont('masked text field','default','ДД.ММ.ГГГГ','grey')
+            
+            
+           
