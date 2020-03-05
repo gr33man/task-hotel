@@ -18,7 +18,7 @@
 .inp::placeholder{
     font-size: 14px;
     font-style: 'Montserrat';
-    padding-left: 5px;
+    padding-left: 15px;
 
 }
 
@@ -26,11 +26,52 @@
 .dropblock{
     @extend .inp;
     cursor:pointer;
+    position: relative;
 
-    & i{
+    & .material-icons{
         margin-left: 285px;
-        margin-top: 8px;
+        margin-top: -20px;
         font-size: 24px;
-        color: rgba(31, 32, 65, 0.5);    
+        position: absolute;
+        color: rgba(31, 32, 65, 0.5);
+        display: block;    
+    }
+
+    &__words {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+        margin-top: 12px;
+        margin-left: 15px;
+        display: inline-block;
     }
 }
+
+.dropblockshort {
+    @extend .dropblock;
+    width: 150px;
+
+    &__words {
+        @extend .dropblock__words;
+    } 
+
+    & .material-icons {
+        margin-left:118px;
+    
+    }
+    
+}
+
+.dropblockmiddle {
+    @extend .dropblock;
+    width: 266px;
+
+    &__words {
+        @extend .dropblock__words;
+    } 
+
+    & .material-icons {
+        margin-left:230px;
+    
+    }
+}      

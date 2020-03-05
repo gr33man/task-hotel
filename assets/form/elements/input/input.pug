@@ -1,8 +1,17 @@
 mixin inpText(text, kind="text")
     input.inp(type=kind class!=attributes.class placeholder=text)
 
-mixin dropdown
+mixin dropdown(words)
     div.dropblock
+        span.dropblock__words= words 
         <i class="material-icons">keyboard_arrow_down</i>
 
-    
+mixin dropshort(words)
+    div.dropblockshort
+        span.dropblockshort__words= words 
+        <i class="material-icons">keyboard_arrow_down</i> 
+
+mixin dropMiddle(words)
+    div.dropblockmiddle
+        span.dropblockmiddle__words(class!=attributes.class)= words 
+        <i class="material-icons">keyboard_arrow_down</i>          
