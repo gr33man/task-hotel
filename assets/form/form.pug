@@ -6,48 +6,36 @@ html(lang="ru")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
         title forms
     body
-        include ./elements/input/input.pug
         include ../sign/sign.pug
-       
-        mixin inpCont(text,content,placeholder,atr, kind)
-            div.boxinp
-                span.boxinp__text= text
-                span.boxinp__content= content
-                div.boxinp__input
-                    +inpText(placeholder,kind)(class=atr)   
+        include ./elements/shell/shell.pug
         
-        mixin dropCont(words,text)
-            div.boxinp
-                span.boxinp__text= text
-                div.boxinp__input
-                    +dropdown(words)   
 
-        mixin dropContShort(words,text)
-            div.boxinp
-                span.boxinp__text= text
-                div.boxinp__input
-                    +dropshort(words)
-
-        mixin dropContMiddle(words,text,col)
-            div.boxinp
-                span.boxinp__text= text
-                div.boxinp__input
-                    +dropMiddle(words)(class=col)                              
-
-
+        
         div.container  
-            +inpCont('text field','default','Email','grey') 
-            +inpCont('text field','hover/focus','this is pretty awesome','black')
-            +dropCont('Сколько гостей','default','dropdown')
-            +inpCont('masked text field','default','ДД.ММ.ГГГГ','grey')
+            +inpCont('text field','Email','grey','default') 
+            +inpCont('text field','this is pretty awesome','black','hover/focus')
+            +dropCont('Сколько гостей','dropdown','default')
+            +inpCont('masked text field','ДД.ММ.ГГГГ','grey','default')
         div.container2
             div.container2__elem1
                 +dropContShort('ДД.ММ.ГГГГ','date dropdown')
             div.container2__elem2    
                 +dropContShort('19.08.2019','date dropdown')
             div.container2__elem3    
-                +dropContMiddle('19 авг - 23 авг','filter date dropdown')
+                +dropContMiddle('19 авг - 23 авг','filter date dropdown','black')
             div.container2__elem4    
-                +dropContMiddle('Email','subscription text field','grey')       
-            
-           
+                 +inpCont('subscription text field','Email','grey') 
+                 <i class="material-icons">arrow_forward</i>
+        div.dropdef
+            +dropContMiddle('2 спальни, 2 кровати...','dropdown','black')
+        div.dropexp
+            +dropContMiddle('2 спальни, 2 кровати...','dropdown','black','Default')
+            +expended(['спальни','кровати','ванные комнаты'])
+        div.dropimp
+            +dropCont('Сколько гостей','dropdown')
+            +expendedImprove(['взрослые','дети','младенцы'], 'применить')
+        div.dropimp2
+            +dropCont('3 гостя','dropdown')
+            +expendedImprove(['взрослые','дети','младенцы'], 'применить', 'очистить')      
+                
+

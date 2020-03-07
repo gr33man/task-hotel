@@ -1,0 +1,32 @@
+include ../input/input.pug
+
+mixin inpCont(text,placeholder,atr,content)
+    div.boxinp
+        span.boxinp__text= text
+        if content
+            span.boxinp__content= content
+        div.boxinp__input
+            +inpText(placeholder)(class=atr)               
+        
+mixin dropCont(words,text,content)
+    div.boxinp
+        span.boxinp__text= text
+        if content
+            span.boxinp__content= content
+        div.boxinp__input
+             +dropdown(words)   
+
+mixin dropContShort(words,text)
+    div.boxinp
+        span.boxinp__text= text
+        div.boxinp__input
+            +dropshort(words)
+
+mixin dropContMiddle(words,text,col,content)
+    div.boxinp
+        span.boxinp__text= text
+        if content
+            span.boxinp__content= content
+        div.boxinp__input
+            +dropMiddle(words)(class=col)                              
+
