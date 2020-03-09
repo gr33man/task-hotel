@@ -9,6 +9,7 @@
 body {
     @import "../sign/sign.scss";
     @import "./elements/shell/shell.scss";
+    @import "./elements/check/check.scss";
        
     .container{
         width: 320px;
@@ -127,7 +128,82 @@ body {
         left: 979px;
         top: 876px;
     }
-
-
     
+    .checkboxclose {
+        position: absolute;
+        left: 141px;
+        top: 1182px;
+        width: 266px;
+        height: 44px;
+    }
+
+    .checkboxopen {
+        position: absolute;
+        width: 266px;
+        height: 277px;
+        left: 140px;
+        top: 1246px;
+    }
+
+    .doublecheck1 {
+        position: absolute;
+        width: 222px;
+        height: 129.12px;
+        left: 587px;
+        top: 143px;
+
+        .checkclose {
+            width: 222px;
+        }
+
+        .checkmain {
+            height: 129px;
+            width: 222px;
+        }
+    }
+     
+    .doublecheck2 {
+        position: absolute;
+        width: 266px;
+        height: 145px;
+        left: 587px;
+        top: 1196px;
+
+
+        .checkclose {
+            width: 266px;
+        }
+
+        .checkmain {
+            width: 266px;
+            height: 145px;
+            padding-bottom: 60px;
+            box-sizing: border-box;
+          
+
+            .content {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                color: rgba(31, 32, 65, 0.75);
+            }    
+        }
+        .discrip1 {
+            font-family: 'Montserrat';
+            font-size: 12px;
+            line-height: 14px;
+            width: 203px;
+            height: 28px;
+            display: inline-block;
+            color: rgba(31, 32, 65, 0.5);
+            position: absolute;
+            top: 70px;
+            left: 30px;
+        }
+
+        .discrip2 {
+            @extend .discrip1;
+            top: 135px;
+        }
+    }
 }

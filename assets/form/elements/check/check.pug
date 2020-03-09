@@ -1,0 +1,15 @@
+mixin checkhead(title,icon)
+    div.checkclose
+        p.checkclose__words= title
+        if icon
+            <i class="material-icons">#{icon}</i>
+
+mixin checkbody([...items])
+    div.checkmain
+        each item in [...items]
+            div.checkmain__part
+                label
+                    input(type="checkbox")
+                    span.fake
+                    span.content= item
+                

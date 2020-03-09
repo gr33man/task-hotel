@@ -8,6 +8,7 @@ html(lang="ru")
     body
         include ../sign/sign.pug
         include ./elements/shell/shell.pug
+        include ./elements/check/check.pug
         
 
         
@@ -37,5 +38,18 @@ html(lang="ru")
         div.dropimp2
             +dropCont('3 гостя','dropdown')
             +expendedImprove(['взрослые','дети','младенцы'], 'применить', 'очистить')      
-                
+        div.checkboxclose
+            +checkhead('expandable checkbox list','expand_more')
+        div.checkboxopen
+            +checkhead('expandable checkbox list','expand_less')
+            +checkbody(['Завтрак','Писменный стол','Стул для крепления','Кроватка','Телевизор','Шампунь'])
+        div.doublecheck1
+            +checkhead('checkboxbuttons')
+            +checkbody(['Можно курить','Можно с питомцами',' Можно пригласить гостей (до 10 человек)'])
+        div.doublecheck2
+            +checkhead('Rich Checkbox Buttons')
+            +checkbody(['Широкий коридор','Помощник для инвалидов'])
+            span.discrip1 Ширина коридоров в номере не менее 91 см.
+            span.discrip2  На 1 этаже вас встретит специалист и проводит до номера.
+
 

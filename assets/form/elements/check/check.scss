@@ -1,0 +1,85 @@
+.checkclose {
+    width: 266px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__words {
+        width: 192px;
+        height: 15px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin: auto 0;
+    }
+
+    & i {
+        font-size: 24px;
+        line-height: 24px;
+        margin: auto 0;
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
+
+.checkmain {
+    width: 266px;
+    height: 277px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__part {
+        display: flex;
+        height: 20px;
+        
+        & label {
+            display: flex;
+
+
+            & input {
+                display: none;
+            }
+
+            & input:checked + .fake::before {
+                border: 1px solid #BC9CFF;
+                background-image: url("../img/vec.svg");
+                background-repeat: no-repeat;
+                background-position: 50% 30%;
+                background-size: 12px;
+            }
+
+            & .fake::before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgba(31, 32, 65, 0.25);
+                box-sizing: border-box;
+                border-radius: 4px;
+                display: inline-block;
+    
+            }
+
+            & .content {
+                display: inline-block;
+                font-family: 'Montserrat';
+                margin: auto 0 auto 10px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                color: rgba(31, 32, 65, 0.5);
+                
+            }
+
+            
+        }
+        
+       
+
+    
+    }
+}

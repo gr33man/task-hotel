@@ -33,7 +33,8 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        col: './form/form.js'
+        form: './form/form.js',
+        input: './form/elements/input/input.js'
 
     },
     output: {
