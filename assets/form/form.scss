@@ -165,10 +165,10 @@ body {
     .doublecheck2 {
         position: absolute;
         width: 266px;
-        height: 145px;
+        height: 175px;
         left: 587px;
         top: 1196px;
-
+        
 
         .checkclose {
             width: 266px;
@@ -205,5 +205,69 @@ body {
             @extend .discrip1;
             top: 135px;
         }
+    }
+
+    .radbut {
+        position: absolute;
+        width: 220.74px;
+        height: 55px;
+        left: 587px;
+        top: 363px;
+
+        &__name {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+        }
+    
+    }
+
+    .togbut {
+        position: absolute;
+        width: 260px;
+        height: 89px;
+        left: 587px;
+        top: 444.56px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__name {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+            
+    
+        }
+
+        &__elem {
+            height: 24px;
+            display: flex;
+            justify-content: space-between;
+
+            & .text {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+                display: inline-block;
+                
+
+                
+
+                
+            }
+        }
+
     }
 }

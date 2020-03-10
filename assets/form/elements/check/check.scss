@@ -83,3 +83,126 @@
     
     }
 }
+
+.radmenu {
+    width: 220px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11px;
+     
+    & input {
+        display: none;
+    }
+
+    & .fake {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 50px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    & .fake::before{
+        content: '';
+        position: absolute;
+        transform: translate(40%,44%);
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 50px;
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+    }
+
+    & input:checked + .fake::before {
+        content: '';
+        opacity: 1;
+       
+        
+    }
+
+
+    & input:checked + .fake + .content{
+        color: rgba(31, 32, 65, 0.75);
+
+    }
+
+
+
+    & .content {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 8px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.5);
+    }
+
+   
+
+   
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    
+
+    
+ 
+    & input {
+        display:none;
+    }
+
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 4px;
+      bottom: 3px;
+      background-color:  rgba(31, 32, 65, 0.25);
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+   
+    
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider{
+        border: 1px solid #BC9CFF;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(18px);
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    
+    
+  }

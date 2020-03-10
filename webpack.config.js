@@ -57,11 +57,11 @@ module.exports = {
                 use: cssCompile()
             },
             {
-                test: /\.(ttf|svg|ttf|eof)$/,
+                test: /\.(ttf|ttf|eof)$/,
                 loader: 'file-loader'
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader'
             }
         ]

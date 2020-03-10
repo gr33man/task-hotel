@@ -12,4 +12,19 @@ mixin checkbody([...items])
                     input(type="checkbox")
                     span.fake
                     span.content= item
-                
+
+
+
+mixin radio([...choices])
+    div.radmenu
+        each choice in [...choices]
+            label
+                input(type="radio" name="sex")
+                span.fake
+                span.content= choice 
+            
+mixin toggle
+    label.switch
+        input(type="checkbox")
+        span.slider
+                   
