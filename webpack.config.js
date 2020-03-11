@@ -34,8 +34,7 @@ module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
         form: './form/form.js',
-        input: './form/elements/input/input.js'
-
+        button: './form/elements/button/button.js'
     },
     output: {
         filename: '[name].js',
@@ -62,7 +61,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    name: 'img/[name].[ext]'
+                }
             }
         ]
     },

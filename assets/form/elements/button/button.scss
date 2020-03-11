@@ -1,0 +1,27 @@
+.likes {
+    width: 39.72px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid;
+    color: #BC9CFF;
+    cursor: pointer;
+   
+    & i {
+        font-size: 12px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-top: 4px;
+       
+    }
+
+    &__digit {
+        font-size: 12px;
+        display: inline-block;
+       position: relative;
+       font-family: 'Montserrat';
+       bottom: 2px;
+       left: 5px;
+      
+      
+    }
+}

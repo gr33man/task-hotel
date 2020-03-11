@@ -9,6 +9,8 @@ html(lang="ru")
         include ../sign/sign.pug
         include ./elements/shell/shell.pug
         include ./elements/check/check.pug
+        include ./elements/comment/comment.pug
+        
         
 
         
@@ -44,7 +46,7 @@ html(lang="ru")
             +checkhead('expandable checkbox list','expand_less')
             +checkbody(['Завтрак','Писменный стол','Стул для крепления','Кроватка','Телевизор','Шампунь'])
         div.doublecheck1
-            +checkhead('checkboxbuttons')
+            +checkhead('checkbox buttons')
             +checkbody(['Можно курить','Можно с питомцами',' Можно пригласить гостей (до 10 человек)'])
         div.doublecheck2
             +checkhead('Rich Checkbox Buttons')
@@ -62,5 +64,18 @@ html(lang="ru")
             div.togbut__elem     
                 +toggle
                 span.text Получать спецпредложения    
-
-
+        div.dischotel
+            +discription('tag_faces','Комфорт', 'Шумопоглощающие стены')
+            hr
+            +discription('location_city','Удобство', 'Окно в каждой из спален')
+            hr
+        div.preslist
+            span.preslist__title bullet list 
+            +warning
+        div.opinion
+            +comments('../img/image.svg')
+        div.likebutton
+            span.likebutton__title like button
+            +likebut(2,'favorite_border')
+            +likebut(12)
+                  

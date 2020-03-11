@@ -1,0 +1,32 @@
+include ../button/button.pug
+
+mixin discription(icon,title,text) 
+    div.common
+        <i class="material-icons">#{icon}</i>
+        div.desc
+            span.desc__title= title
+            span.desc__text= text
+
+
+mixin warning
+    ul.lister
+        each point in ['Нельзя с питомцами ','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']
+            li.lister__el= point
+
+
+mixin comments(img, num)
+    div.commentblock
+        div.userinfo
+            img(src=img width="96px" height="96px")
+            div.datauser
+                span.datauser__name Мурад Сарафанов
+                br
+                span.data__time 5 дней назад
+        div.usercomment
+            +likebut(12)
+            span.usercomment__chater.
+                                    Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
+                                    И стены,  действительно, шумоподавляющие. Выкрикивал комплименты повару — 
+                                    никто не жаловался из соседей.  
+          
+                

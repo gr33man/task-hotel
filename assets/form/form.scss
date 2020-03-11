@@ -10,6 +10,7 @@ body {
     @import "../sign/sign.scss";
     @import "./elements/shell/shell.scss";
     @import "./elements/check/check.scss";
+    @import "./elements/comment/comment.scss";
        
     .container{
         width: 320px;
@@ -269,5 +270,72 @@ body {
             }
         }
 
+    }
+
+    .dischotel {
+        position: absolute;
+        width: 291px;
+        height: 158px;
+        left: 140px;
+        top: 1603px;
+        
+
+        & hr {
+            margin:20px 0 20px 0;
+            border: 0.25px solid rgba(31, 32, 65, 0.1);
+        }
+    }
+
+    .preslist {
+        position: absolute;
+        width: 292px;
+        height: 147px;
+        left: 979px;
+        top: 1196px;
+
+        &__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+        }
+    }
+
+    .opinion {
+        position: absolute;
+        width: 711px;
+        height: 133px;
+        left: 587px;
+        top: 1573px;
+
+    }
+
+    .likebutton{
+        position: absolute;
+        width: 89.72px;
+        height: 51px;
+        left: 587px;
+        top: 584px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        & .likes:nth-child(2) {
+            color: rgba(31, 32, 65, 0.25);
+
+        }
+
+        &__title {
+            position: absolute;
+            top: 0;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+        } 
     }
 }

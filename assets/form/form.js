@@ -1,6 +1,8 @@
 import './form.pug';
 import './form.scss';
 import dinamicDrop from './elements/input/input.js';
+import img from '../img/image.svg';
+
 
 
 let dropexp = document.getElementsByClassName('dropexp')[0];
