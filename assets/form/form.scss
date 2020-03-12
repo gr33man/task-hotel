@@ -338,4 +338,93 @@ body {
             text-transform: uppercase;
         } 
     }
+
+    .ratebutton {
+        position: absolute;
+        width: 260px;
+        height: 60px;
+        left: 727px;
+        top: 656px;
+       
+
+        &__title {
+            @extend .likebutton__title;
+        }
+
+        & .starbox:nth-child(2) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        & .starbox:last-child {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    .buttonset {
+        position: absolute;
+        width: 218px;
+        height: 195px;
+        left: 979px;
+        top: 231px;
+
+
+        &__title {
+            @extend .likebutton__title;
+        }
+
+        & .btnclick:nth-child(2) {
+            position: absolute;
+            top: 31px;
+        }
+
+        & .btnclick:nth-child(3) {
+            position: absolute;
+            top: 31px;
+            right: 0;
+            opacity: 0.5;
+        }
+
+        & .btnclick:nth-child(4) {
+            position: absolute;
+            top: 119px;
+            color:#BC9CFF;
+            background-color: white;
+        
+        }
+
+        & .btnclick:nth-child(5) {
+            position: absolute;
+            top: 119px;
+            right: 0;
+            color:#BC9CFF;
+            border: 1px solid rgba(188, 156, 255, 0.5);
+            background-color: white;
+        }
+
+        &__name1 {
+            position: absolute;
+            left:0;
+            bottom: 0;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #BC9CFF;
+        }
+
+        &__name2 {
+            @extend .buttonset__name1;
+            left: 82px;
+            color: rgba(31, 32, 65, 0.5);
+        }
+
+
+
+    }
+    
 }

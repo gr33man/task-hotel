@@ -1,4 +1,5 @@
 let likepluses = document.getElementsByClassName('likes');
+let starbox = document.querySelectorAll('.starbox');
 
 for (const like of likepluses) {
     like.addEventListener('click', function () {
@@ -7,3 +8,25 @@ for (const like of likepluses) {
     });
 }
 
+for (let i = 0; i < starbox.length; i++) {
+    let stars = starbox[i].children;
+
+    for (let j = 0; j < stars.length; j++) {
+
+        stars[j].addEventListener('click', function () {
+            let index = j;
+
+            if (stars[j].innerHTML === 'star_border') {
+
+                for (let j = 0; j <= index; j++) {
+                    stars[j].innerHTML = 'star';
+                }
+            } else {
+                for (let j = index; j <= 4; j++) {
+                    stars[j].innerHTML = 'star_border';
+                }
+            }
+        })
+
+    }
+}

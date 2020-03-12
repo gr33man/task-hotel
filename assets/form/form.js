@@ -17,13 +17,26 @@ let dripTwo = dropimp2.children[1].children[1].children[1].children[1];
 dripOne.innerHTML = 2;
 dripTwo.innerHTML = 2;
 
-dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
-
 
 let checkbox1 = document.getElementsByClassName('checkboxopen')[0].lastElementChild.children;
 let double1 = document.getElementsByClassName('doublecheck1')[0].lastElementChild.children;
 let radbut = document.getElementsByClassName('radbut')[0].children[1].children[0].children[0];
 let togbut = document.getElementsByClassName('togbut')[0].children[1].children[0].children[0];
+
+
+let star1 = document.getElementsByClassName('starbox')[0].children;
+let star2 = document.getElementsByClassName('starbox')[1].children;
+
+
+
+for (let i = 0; i < star1.length - 1; i++) {
+    star1[i].innerHTML = 'star';
+}
+
+for (let j = 0; j < star2.length; j++) {
+    star2[j].innerHTML = 'star';
+}
+
 
 radbut.checked = true;
 togbut.checked = true;
@@ -41,4 +54,6 @@ for (let i = 0; i < double1.length; i++) {
     }
 
 }
+
+dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
 

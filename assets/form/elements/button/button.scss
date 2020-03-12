@@ -4,7 +4,7 @@
     border-radius: 10px;
     border: 1px solid;
     color: #BC9CFF;
-    cursor: pointer;
+    cursor:  pointer;
    
     & i {
         font-size: 12px;
@@ -24,4 +24,35 @@
       
       
     }
+}
+
+.starbox {
+    width: 120px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    & i {
+        color: #BC9CFF;
+        cursor: pointer;
+    }
+}
+
+.btnclick {
+    width: 99px;
+    height: 44px;
+    background-color:  #BC9CFF;
+    border-radius: 22px;
+    border: 1px solid #BC9CFF;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    
+
 }

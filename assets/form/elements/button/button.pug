@@ -2,3 +2,15 @@ mixin likebut(digit,icon="favorite")
     div.likes
         <i class="material-icons">#{icon}</i>
         span.likes__digit= digit 
+
+
+mixin ratebut(icon="star_border")
+    div.starbox
+        -for(i=0;i<5;i++)
+            <i class="material-icons">#{icon}</i>
+
+
+mixin click(name)
+    button.btnclick= name             
+
+            

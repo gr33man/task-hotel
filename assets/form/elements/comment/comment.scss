@@ -90,8 +90,8 @@
 .commentblock {
     width: 711px;
     height: 133px;
+    
 
-  
     & .userinfo{
        display: flex;
        position: relative;
@@ -105,7 +105,7 @@
             position: relative;
             right: 20px;
             bottom: 10px;
-           
+            
         }
         & .datauser {
             font-family: 'Montserrat';
@@ -126,6 +126,7 @@
         margin-bottom: 420px;
         display: flex;
         justify-content: space-between;
+       
     
 
         &__chater {
