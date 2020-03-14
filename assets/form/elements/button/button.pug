@@ -10,7 +10,16 @@ mixin ratebut(icon="star_border")
             <i class="material-icons">#{icon}</i>
 
 
-mixin click(name)
-    button.btnclick= name             
+mixin click(name,icon)
+    if icon
+        button.btnclick #{name}  <i class="material-icons">#{icon}</i>            
+    else 
+         button.btnclick= name
 
+mixin slidebar
+    p
+        label(for="amount") Price range:
+        input(type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;")
+
+    div(id="slider-range" style="outline:1px solid red;")
             

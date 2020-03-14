@@ -426,5 +426,28 @@ body {
 
 
     }
+    .longbut {
+        position: absolute;
+        width: 320px;
+        height: 44px;
+        left: 979px;
+        top: 456px;
+
+        & .btnclick {
+            width: 320px; 
+        }
+
+    }
+    .rangeslider{
+        position: absolute;
+        width: 266px;
+        height: 47.44px;
+        left: 979px;
+        top: 143px;
+
+        &__title {
+            @extend .likebutton__title;
+        }
+    }
     
 }

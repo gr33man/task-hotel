@@ -3,7 +3,10 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=1170")
         link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet" href="ui/jquery-ui.css")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
+       
+       
         title forms
     body
         include ../sign/sign.pug
@@ -90,4 +93,15 @@ html(lang="ru")
             +click('click me')
             span.buttonset__name1 click me
             span.buttonset__name2 click me              
-               
+        div.longbut
+            +click('перейти к оплате','arrow_forward')
+        div.rangeslider
+            span.slider__title Range Slider
+            +slidebar      
+         
+        
+
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
