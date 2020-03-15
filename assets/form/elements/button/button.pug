@@ -20,4 +20,11 @@ mixin slidebar
     div.slideset
         input#amount(type="text" readonly)
         div#slider-range
-            
+
+mixin pagebar
+    div.pagebox
+        div.pagebox__one 1
+        each page in ['2','3','...','15']
+            div.pagebox__num= page 
+        <i class="material-icons">arrow_forward</i>
+        span.pagebox__text 1 – 12 из 100+ вариантов аренды                  

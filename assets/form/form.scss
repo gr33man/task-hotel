@@ -345,8 +345,9 @@ body {
         position: absolute;
         width: 260px;
         height: 60px;
-        left: 727px;
+        left: 587px;
         top: 656px;
+        
        
 
         &__title {
@@ -450,7 +451,6 @@ body {
 
         &__title {
             @extend .likebutton__title;
-            position: absolute;
         }
     }
     .pagination{
@@ -459,6 +459,11 @@ body {
         height: 106px;
         left: 979px;
         top: 540px;
+    
+
+        &__title {
+            @extend .likebutton__title;
+        }
     }
     
 }
