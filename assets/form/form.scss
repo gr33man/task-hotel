@@ -11,6 +11,8 @@ body {
     @import "./elements/shell/shell.scss";
     @import "./elements/check/check.scss";
     @import "./elements/comment/comment.scss";
+
+    cursor: default;
        
     .container{
         width: 320px;
@@ -444,10 +446,19 @@ body {
         height: 47.44px;
         left: 979px;
         top: 143px;
+       
 
         &__title {
             @extend .likebutton__title;
+            position: absolute;
         }
+    }
+    .pagination{
+        position: absolute;
+        width: 241px;
+        height: 106px;
+        left: 979px;
+        top: 540px;
     }
     
 }

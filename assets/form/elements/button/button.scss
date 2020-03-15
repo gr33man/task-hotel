@@ -63,7 +63,58 @@
             font-size: 24px;
             line-height: 24px;
         }
-    } 
+    }
+
     
 
+}
+
+.slideset {
+    width: 266px;
+    height:25px;
+    bottom: 0;
+    position: absolute;
+    
+    
+
+    & #amount{
+        border: none;
+        outline: none;
+        font-family: 'Montserrat';
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        position: absolute;
+        right: -50px;
+        top: -19px;
+        color: rgba(31, 32, 65, 0.5);
+       
+    }
+
+    & #slider-range {
+        height: 6px;
+        margin-top: 15px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+       
+
+    
+
+        & span {
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFFFFF;
+            outline: none;
+        }
+
+        & div {
+            background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            margin-top: -1px;
+            height: 8px;
+            
+        }
+     
+     
+    }
 }

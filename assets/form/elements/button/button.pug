@@ -17,9 +17,7 @@ mixin click(name,icon)
          button.btnclick= name
 
 mixin slidebar
-    p
-        label(for="amount") Price range:
-        input(type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;")
-
-    div(id="slider-range" style="outline:1px solid red;")
+    div.slideset
+        input#amount(type="text" readonly)
+        div#slider-range
             

@@ -3,7 +3,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=1170")
         link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
-        link(rel="stylesheet" href="ui/jquery-ui.css")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
        
        
@@ -14,8 +14,6 @@ html(lang="ru")
         include ./elements/check/check.pug
         include ./elements/comment/comment.pug
         
-        
-
         
         div.container  
             +inpCont('text field','Email','grey','default') 
@@ -97,7 +95,8 @@ html(lang="ru")
             +click('перейти к оплате','arrow_forward')
         div.rangeslider
             span.slider__title Range Slider
-            +slidebar      
+            +slidebar
+        div.pagination          
          
         
 
