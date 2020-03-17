@@ -1,4 +1,4 @@
-@import "./elements/input/input.scss";
+@import "../input/input.scss";
 
 .grey {
     color: rgba(31, 32, 65, 0.25) !important;
@@ -15,7 +15,6 @@
 
     .boxinp__input{
         margin-top: 5px;
-        //@import "./elements/input/input.scss";
     }
 
     .boxinp__text {

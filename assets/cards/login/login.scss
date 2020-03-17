@@ -1,0 +1,59 @@
+.logged {
+    width: 380px;
+    height: 358px;
+    @extend %envirfone;
+
+    &__title {
+        @extend %fontstyle;
+        position: absolute;
+        left: 30px;
+        top: 40px;
+    }
+
+    .inp:nth-child(2) {
+       position: absolute;
+       top: 90px;
+       left: 30px;
+    }
+
+    .inp:nth-child(3) {
+        position: absolute;
+        top: 150px;
+        left: 30px;
+     }
+
+     .inp::placeholder{
+        color: rgba(31, 32, 65, 0.25);
+     }
+
+    .btnclick:nth-child(4) {
+        width: 320px;
+        position: absolute;
+        left: 30px;
+        top: 225px;
+    }
+
+    &__enter {
+        position: absolute;
+        width: 320px;
+        height: 44px;
+        bottom: 25px;
+        left: 30px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        & .entertext {
+            font-family: 'Montserrat';
+            font-size: 14px;
+            color: black;
+            margin: auto 0;
+        }
+        
+        & .btnclick {
+            background-color: white;
+            color: #BC9CFF;
+            border-width: 2px;
+        }
+    }
+}

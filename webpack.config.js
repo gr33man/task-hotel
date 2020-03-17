@@ -33,8 +33,9 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        form: './form/form.js',
-        button: './form/elements/button/button.js'
+        cards: './cards/cards.js',
+        calendar: './cards/calendar/calendar.js',
+        input: './form/elements/input/input.js'
     },
     output: {
         filename: '[name].js',
@@ -56,7 +57,7 @@ module.exports = {
                 use: cssCompile()
             },
             {
-                test: /\.(ttf|ttf|eof)$/,
+                test: /\.(ttf|eof|woff|woff2|otf)$/,
                 loader: 'file-loader'
             },
             {
@@ -76,7 +77,7 @@ module.exports = {
 
     plugins: [
         new Html({
-            template: './form/form.pug',
+            template: './cards/cards.pug',
             minify: {
                 collapseWhitespace: isProd
             }

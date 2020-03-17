@@ -1,0 +1,23 @@
+
+include ../../form/elements/input/input.pug
+include ../../form/elements/check/check.pug
+include ../../form/elements/shell/shell.pug
+include ../../form/elements/button/button.pug
+  
+  
+
+div.regisacc 
+    span.regisacc__title  Регистрация аккаунта
+    +inpText('имя')
+    +inpText('фамилия')
+    +radio(['мужчина','женщина'])
+    +inpCont('дата рождения','ДД.ММ.ГГГГ','grey')
+    +inpCont('данные для входа в сервис','Email','grey')
+    +inpText('пароль')
+    div.togglecont
+        +toggle
+        span.togglecont__text Получать спецпредложения
+    +click('перейти к оплате','arrow_forward')
+    div.enter
+        span.enter__text Уже есть аккаунт на Toxin
+        +click('войти')         
