@@ -1,8 +1,50 @@
-div.logged
-    span.logged__title войти
-    +inpText('email')
-    +inpText('пароль')
-    +click('войти','arrow_forward')
-    div.logged__enter
-        span.entertext Нет аккаунта на Toxin?
-        +click('войти') 
+include ../../form/elements/input/input.pug
+include ../../form/elements/check/check.pug
+include ../../form/elements/shell/shell.pug
+include ../../form/elements/button/button.pug
+  
+
+
+mixin loginplag
+    div.logged
+        span.logged__title войти
+        +inpText('email')
+        +inpText('пароль')
+        +click('войти','arrow_forward')
+        div.logged__enter
+            span.entertext Нет аккаунта на Toxin?
+            +click('войти')
+
+mixin reggaplag
+    div.regisacc 
+        span.regisacc__title  Регистрация аккаунта
+        +inpText('имя')
+        +inpText('фамилия')
+        +radio(['мужчина','женщина'])
+        +inpCont('дата рождения','ДД.ММ.ГГГГ','grey')
+        +inpCont('данные для входа в сервис','Email','grey')
+        +inpText('пароль')
+        div.togglecont
+            +toggle
+            span.togglecont__text Получать спецпредложения
+        +click('перейти к оплате','arrow_forward')
+        div.enter
+            span.enter__text Уже есть аккаунт на Toxin
+            +click('войти')         
+
+mixin rooms(num, price,feed,src, icon)
+    div.room
+        div.sphers
+            - for (var x = 0; x < 4; x++)
+                div.sphers__point
+                
+        img(src=src)
+        div.room__stat
+            p.string &#8470; <span class="number">#{num}</span> <span class="lux">люкс</span> <span class="price">#{price}<i class="fa fa-rub" aria-hidden="true" style="font-size:12px;margin-left:1px;"></i></span> <span class="end">в сутки</span>
+            hr
+            div 
+                +ratebut('star')
+                <span class="price">#{feed}</span><span class="end">отзывов</span>
+        if icon       
+            <i class="fa fa-chevron-left arr" aria-hidden="true"></i>
+            <i class="fa fa-chevron-right arr" aria-hidden="true"></i>        

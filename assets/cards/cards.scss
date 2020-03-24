@@ -8,13 +8,7 @@
 
 body {
     
-    @import "./calendar/calendar.scss";
     @import "../sign/sign.scss";
-    @import "../form/elements/input/input.scss";
-    @import "../form/elements/check/check.scss";
-    @import "../form/elements/shell/shell.scss";
-    @import "../form/elements/button/button.scss";
-    @import "./regga/regga.scss";
     @import "./login/login.scss";
 
 
@@ -50,6 +44,18 @@ body {
         left: 560px;
         top: 701px;
         position: absolute;
+    }
+
+    .room:nth-child(4) {
+        position: absolute;
+        left: 980px;
+        top: 559.5px;
+    }
+
+    .room:nth-child(5) {
+        position: absolute;
+        left: 980px;
+        top: 856px;
     }
    
 }

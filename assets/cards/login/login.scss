@@ -1,3 +1,8 @@
+@import "../form/elements/input/input.scss";
+@import "../form/elements/check/check.scss";
+@import "../form/elements/shell/shell.scss";
+@import "../form/elements/button/button.scss";
+
 .logged {
     width: 380px;
     height: 358px;
@@ -56,4 +61,227 @@
             border-width: 2px;
         }
     }
+}
+
+.regisacc {
+    width: 380px;
+    height: 646px;
+    @extend %envirfone;
+
+    &__title {
+       @extend %fontstyle;
+       display: inline-block;
+       position: absolute;
+       left: 60px;
+       top: 40px;
+    }
+
+    
+    & .inp[placeholder="имя"] {
+        position: absolute;
+        top: 90px;
+        left: 30px;
+    }
+
+
+    & .inp[placeholder="фамилия"] {
+        position: absolute;
+        top: 144px;
+        left: 30px;
+    }
+
+    & .inp[placeholder="пароль"] {
+        position: absolute;
+        top: 420px;
+        left: 30px;
+    }
+
+    & .radmenu {
+        position: absolute;
+        top: 198px;
+        left: 30px;
+    }
+
+    & .boxinp {
+        position: absolute;
+        left: 30px;
+        top: 252px;
+    }
+
+    & .boxinp:nth-child(6) {
+        position: absolute;
+        top: 346px;
+    }
+
+    & .inp::placeholder {
+        color: rgba(31, 32, 65, 0.25);
+    }
+
+    & .btnclick:nth-child(9) {
+        width: 320px;
+        height: 44px;
+        position: absolute;
+        top: 510px;
+        left: 25px;
+    }
+
+    & .togglecont {
+        position: absolute;
+        left: 30px;
+        top: 470px;
+        width: 260px;
+        height: 24px;
+      
+        &__text {
+            display: inline-block;
+            position: absolute;
+            left: 50px;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
+
+    & .enter {
+        position: absolute;
+        width: 320px;
+        height: 44px;
+        bottom: 20px;
+        left: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        &__text {
+            font-family: 'Montserrat';
+            font-size: 14px;
+            color: black;
+            margin: auto 0;
+        }
+
+        & .btnclick {
+            background-color: white;
+            color: #BC9CFF;
+            border:2px solid #BC9CFF;
+        }
+
+    }
+      
+
+    
+   
+}
+
+.room {
+    width: 270px;
+    height: 257px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+
+    & .sphers {
+        width: 50px;
+        height: 7.5px;
+        position: absolute;
+        right: 15px;
+        bottom: 119px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        &__point:first-child {
+            background: white;
+        }   
+    
+
+        &__point {
+            width: 7.5px;
+            height: 7.5px;
+            border: 1px solid white;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+
+    }
+
+    & img {
+        width: 270px;
+        height: 151px;
+        border-top-left-radius:4px;
+        border-top-right-radius:4px;
+    }
+
+    &__stat {
+        width: 233px;
+        height: 67px;
+        margin: 0 auto;
+
+        & p.string {
+            font-family: 'Montserrat';
+            font-size: 14px;
+            color: black;
+            font-weight: bold;
+
+            & .number {
+               font-size: 16px;
+               line-height: 17px;
+            }
+
+            & .lux {
+                text-transform: uppercase;
+                color: #BC9CFF;
+                font-size: 12px;
+            }
+
+            & .price {
+                display: inline-block;
+                margin-left: 24px;
+                color: rgba(31, 32, 65, 0.75);
+            }
+
+            & .end {
+                color: rgba(31, 32, 65, 0.5);
+            }
+        }
+
+        & hr {
+          width: 100%;
+          border: 0;
+          height: 1px;
+          margin-top: 10px;
+          background-color: rgba(31, 32, 65, 0.1);
+        }
+
+        & div {
+            display: flex;
+            @extend p.string;
+
+            & .price {
+                margin: auto 0 auto 25px;
+            }
+
+            & .end {
+                margin: auto 0 auto 5px;
+            }
+        }
+    }
+
+    & .arr {
+        position: absolute;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    & .arr:nth-child(4) {
+        top: 68px;
+        left: 10px;
+    }
+
+    & .arr:nth-child(5) {
+        top: 68px;
+        right: 10px;
+    }
+
 }

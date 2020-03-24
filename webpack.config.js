@@ -34,8 +34,8 @@ module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
         cards: './cards/cards.js',
-        calendar: './cards/calendar/calendar.js',
-        input: './form/elements/input/input.js'
+        input: './form/elements/input/input.js',
+        button: './form/elements/button/button.js'
     },
     output: {
         filename: '[name].js',
@@ -88,3 +88,7 @@ module.exports = {
         })
     ]
 }
+
+
+
+
