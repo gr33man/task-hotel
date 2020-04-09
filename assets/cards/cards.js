@@ -8,3 +8,4 @@ let star = document.getElementsByClassName('starbox')[1].children[4];
 star.innerHTML = 'star_border';
 
 
+

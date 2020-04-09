@@ -35,7 +35,8 @@ module.exports = {
     entry: {
         cards: './cards/cards.js',
         input: './form/elements/input/input.js',
-        button: './form/elements/button/button.js'
+        button: './form/elements/button/button.js',
+        calendar: './cards/calendar/calendar.js'
     },
     output: {
         filename: '[name].js',
