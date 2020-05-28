@@ -1,3 +1,6 @@
+@import '../../form/elements/shell/shell.scss';
+@import '../../form/elements/button/button.scss';
+
 .datepicker-here {
 
     position: relative;    
@@ -169,4 +172,211 @@
         }
     }
 
-}    
+} 
+
+.searcher {
+    width: 380px;
+    height: 374px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    &__title {
+        font-family: 'Quicksand',sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        width: 250px;
+        height: 60px;
+        margin: 40px 0 0 30px;
+    }
+
+    & .boxinp:nth-child(2) {
+        position: absolute;
+        left: 30px;
+        top: 120px;
+        width: 150px;
+    }
+
+    & .boxinp:nth-child(3) {
+        position: absolute;
+        top: 120px;
+        width: 150px;
+        right: 30px;  
+    }
+
+    & .boxinp:nth-child(4) {
+        position: absolute;
+        top: 200px;
+        right: 30px;  
+    }
+
+    & .btnclick {
+        width: 320px;
+        position: absolute;
+        top: 300px;
+        left: 30px;
+    }
+}
+
+.pricebody {
+    width: 380px;
+    height: 511px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    & p.string {
+        font-family: 'Montserrat';
+        font-size: 14px;
+        color: black;
+        font-weight: bold;
+        padding-left: 30px;
+        margin-top: 40px;
+
+        & .number {
+           font-size: 24px;
+           line-height: 17px;
+           font-family: 'Quicksand',sans-serif;
+
+        }
+
+        & .lux {
+            text-transform: uppercase;
+            color: #BC9CFF;
+            font-size: 12px;
+        }
+
+        & .price {
+            display: inline-block;
+            margin-left: 24px;
+            color: rgba(31, 32, 65, 0.5);
+            margin-left: 110px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        & .end {
+            color: rgba(31, 32, 65, 0.5);
+            font-weight: normal;
+            
+        }
+    }
+
+    & .boxinp:nth-child(2) {
+        left: 30px;
+        top: 90px;
+        position: absolute;
+        width: 150px;
+    }
+
+    & .boxinp:nth-child(3) {
+        left: 200px;
+        top: 90px;
+        width: 150px;
+        position: absolute;
+    }
+
+    & .boxinp:nth-child(4) {
+        left: 30px;
+        top: 174.44px;
+        position: absolute;
+        width: 320px;
+
+       
+    }
+    
+    &__boxprice {
+        width: 320px;
+        height: 104px;
+        position: absolute;
+        top: 259px;
+        left: 31px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        & .namelist {
+            font-family: 'Montserrat';
+            font-size: 14px;
+            line-height: 20px;
+            color: rgba(31, 32, 65, 0.75);
+           
+          
+        }
+
+        & .circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            border-radius: 50px;
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgba(31, 32, 65, 0.5);
+            position: absolute;
+            margin-left: 5px;
+        }
+
+        & .circle:nth-child(1) {
+            margin-left: 32px;
+        }
+        
+        & .priceitems {
+            width: 236px;
+            height: 104px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        & .pricescores {
+            width: 56px;
+            height: 88px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           
+
+            & .namelist {
+                text-align: right;
+            }
+        }
+
+        
+    } 
+
+    & .allcost {
+        position: absolute;
+        bottom: 96px;
+        left: 31px;
+        font-family: 'Quicksand',sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+        
+
+        &__dot {
+           width: 182px;
+           border: 1px dashed rgba(31, 32, 65, 0.25);
+           display: inline-block;
+           position: relative;
+           top: 9px;
+           margin-left: 5px;
+           margin-right: 5px;
+           box-sizing: border-box;
+
+        }
+    }
+
+    & .btnclick {
+        position: absolute;
+        bottom: 25px;
+        left: 30px;
+        width: 320px;
+    }
+
+}

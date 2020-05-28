@@ -3,6 +3,8 @@ $('.datepicker-here').datepicker({
     navTitles: {
         days: 'MM yyyy'
     },
-    range: true
+    range: true,
+    minDate: new Date()
 });
+
 
