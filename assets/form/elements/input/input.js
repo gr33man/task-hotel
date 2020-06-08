@@ -1,5 +1,7 @@
 
-export default function dinamicDrop(min, plus, num) {
+dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
+
+function dinamicDrop(min, plus, num) {
 
     let minbuts = document.getElementsByClassName(min);
     let plusbuts = document.getElementsByClassName(plus);

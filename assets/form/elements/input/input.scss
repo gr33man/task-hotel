@@ -19,6 +19,7 @@
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    background-color: white;
 
     .elements{
         height: 30px;
@@ -45,7 +46,7 @@
             position: absolute;
             display: flex;
             justify-content: space-between;
-            right: 0;
+            right: 7px;
             
 
             &__num{
@@ -148,6 +149,10 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.inp:focus {
+    outline: none;
 }
 
 .inp::placeholder{

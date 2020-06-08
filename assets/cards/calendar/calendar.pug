@@ -1,6 +1,7 @@
 include ../../form/elements/shell/shell.pug
 include ../../form/elements/button/button.pug
 
+
 mixin calendar
     div.datepicker-here
         div.butcont
@@ -16,6 +17,9 @@ mixin searchroom
         +dropContShort('ДД.ММ.ГГГГ','отъезд')
         +dropCont('Сколько гостей','гости')
         +click('подобрать номер','arrow_forward')
+        
+    
+     
                           
 mixin pricelist(num,price)
     div.pricebody

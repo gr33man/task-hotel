@@ -1,8 +1,6 @@
 import './form.pug';
 import './form.scss';
-import dinamicDrop from './elements/input/input.js';
 import img from '../img/image.svg';
-
 
 
 let dropexp = document.getElementsByClassName('dropexp')[0];
@@ -55,5 +53,5 @@ for (let i = 0; i < double1.length; i++) {
 
 }
 
-dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
+
 
