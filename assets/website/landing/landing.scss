@@ -1,0 +1,28 @@
+
+
+
+body {
+    margin: 0;
+    @import '../../foothead/puggy/header1/header1.scss';
+    
+    
+    .header1 {
+        margin-top: 0;
+       
+        .bar1 {
+            width: 446px;
+
+            &__el1:nth-child(1) {
+                & a {
+                   font-weight: normal;
+                   color: rgba(31, 32, 65, 0.5) !important;
+
+                   
+                }
+            }
+        }
+    }
+
+   
+    
+}

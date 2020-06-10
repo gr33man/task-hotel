@@ -33,10 +33,7 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        cards: './cards/cards.js',
-        input: './form/elements/input/input.js',
-        button: './form/elements/button/button.js',
-        calendar: './cards/calendar/calendar.js'
+        landing: './website/landing/landing.js',
     },
     output: {
         filename: '[name].js',
@@ -78,7 +75,7 @@ module.exports = {
 
     plugins: [
         new Html({
-            template: './cards/cards.pug',
+            template: './website/landing/landing.pug',
             minify: {
                 collapseWhitespace: isProd
             }
