@@ -18,14 +18,14 @@ footer.footer1
         div.emblem__tox
             include ../../../sign/toxin.pug
             p 
-                pre
-                     |Lorem ipsum dolor sit amet 
-                     |consectetur adipiscing elit aliquam
-                     | eget nullam pellentesque aliquam
-                     | curabitur cociis
+                
+                |Lorem ipsum dolor sit amet 
+                |consectetur adipiscing elit aliquam
+                | eget nullam pellentesque aliquam
+                | curabitur cociis
                 
     div.navigation
-        +checklist('NAVIGATION', 'NAVIGATION','About us','News','Support','Poducts')
+        +checklist('NAVIGATION', 'NAVIGATION','About us','News','Support','Products')
     div.about
          +checklist('ABOUT US', 'ABOUT US','Who we are','Our team','Careers','Investors')
     div.support
@@ -34,7 +34,7 @@ footer.footer1
         div.blocktext
             span.blocktext__title Subscribe to our newsletter
             span.blocktext__infotext
-                pre
+                p
                     |Receive our latest news and 
                     |promotions in your inbox! 
         input.postup__input(type="text" placeholder="Your email address")

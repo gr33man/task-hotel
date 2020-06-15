@@ -2,7 +2,7 @@
 
 %block {
     position: absolute;
-    width: 81px;
+    width: 143px;
     height: 168px;
     top: 104px;
     display: flex;
@@ -79,14 +79,18 @@
        
         &__tox{
             @import "../../../sign/toxin.scss";
+
+
+            & p {
+                font-family: 'Montserrat';
+                width: 260px;
+                font-size: 14px;
+                line-height: 24px;
+                color: rgba(31, 32, 65, 0.75);
+            }
         }
 
-        .emblem p {
-            font-family: 'Montserrat';
-            width: 260px;
-            font-size: 14px;
-            line-height: 24px;
-        }
+        
     }
 
     
@@ -109,8 +113,7 @@
         left: 940px;
         top: 104px; 
         height: 130px;
-        width: 113px;
-
+        width: 153px;
     }
 
     .postup{
@@ -135,7 +138,7 @@
                 text-transform: uppercase;
                 color: #1F2041;
             }
-            &__infotext pre {
+            &__infotext p {
                 font-family: 'Montserrat';
                 font-size: 14px;
                 line-height: 24px;
@@ -147,10 +150,11 @@
         &__input {
             height: 44px;
             width: 258px;
-            margin-top: 20px;
+            margin-top: 30px;
             border: 1px solid rgba(31, 32, 65, 0.25);
             box-sizing: border-box;
             border-radius: 4px;
+            outline: none;
               
         }
 
@@ -167,7 +171,7 @@
             position: absolute;
             width: 44px;
             height: 44px;
-            bottom: -16px;
+            bottom: -25px;
             left: 227px;
             color: #BC9CFF;
             font-size: 24px;
@@ -198,7 +202,7 @@
         & p{
             position: absolute;
             top: 4px;
-            width: 332px;
+            width: 367px;
             height: 18px;
             left: 140px;
             font-family: 'Montserrat';

@@ -7,12 +7,7 @@ $('.datepicker-here').datepicker({
 });
 
 
-let dbs1 = document.getElementsByClassName('dropblockshort')[0];
 
-
-dbs1.addEventListener('click', function () {
-
-});
 
 
 

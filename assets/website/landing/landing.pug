@@ -2,9 +2,18 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport", content="width=1170")
         link( rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
         title гостиница Toxin
+        include ../../cards/calendar/calendar.pug
     body
-        include ../../foothead/puggy/header1/header1.pug
+        include ../../foothead/puggy/header1/header1.pug 
+        i.material-icons#mi1 expand_more 
+        i.material-icons#mi2 expand_more
+        div.picfone
+            +searchroom
+            p.picfone__slogan 
+                               | Лучшие номера для вашей работы, 
+                               | отдыха и просто вдохновения  
+        include ../../foothead/puggy/info/info.pug                       
