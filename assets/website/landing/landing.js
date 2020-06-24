@@ -1,4 +1,5 @@
 import './landing.scss';
+import dinamicDrop from '../../form/elements/input/input.js';
 
 // данные
 
@@ -11,6 +12,22 @@ let emblem_tox = document.getElementsByClassName('emblem__tox')[0];
 let menues = document.getElementsByClassName('menu');
 let blocktext = document.getElementsByClassName('blocktext')[0];
 let links = document.getElementsByClassName('links')[0];
+let arrive = document.getElementsByClassName('dropblockshort')[0];
+let embred = document.getElementsByClassName('dropblockshort')[1];
+let calendar = document.getElementsByClassName('datepicker-here')[0];
+let click = 1;
+let clear = document.getElementsByClassName('clear')[0];
+let confirm = document.getElementsByClassName('confirm')[0];
+
+
+let dropblock = document.getElementsByClassName('dropblock')[0];
+let pluses = document.getElementsByClassName('elements__numbers__circle2');
+let mines = document.getElementsByClassName('elements__numbers__circle1');
+let nums = document.getElementsByClassName('elements__numbers__num');
+let sum = 0;
+let cancel = document.getElementsByClassName('cancel')[0];
+let ok = document.getElementsByClassName('ok')[0];
+let droppyex = document.getElementsByClassName('droppyex')[0];
 
 // код
 
@@ -28,10 +45,85 @@ bars[bars.length - 1].parentElement.removeChild(bars[bars.length - 1]);
 changeName(bars, menuBars);
 changeName(menues, arrForMenu);
 
+calUp(arrive);
+calUp(embred);
+
+$('.datepicker-here').datepicker({
+    navTitles: {
+        days: 'MM yyyy'
+    },
+    range: true,
+    minDate: new Date()
+});
+
+dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
+
+calendar.addEventListener('click', changeFirstData);
+
+confirm.addEventListener('click', function () {
+    calendar.style.display = 'none';
+});
+
+clear.addEventListener('click', function () {
+    let origin = 'ДД.ММ.ГГГГ';
+    arrive.children[0].innerHTML = origin;
+    embred.children[0].innerHTML = origin;
+});
 
 
+
+dropChange(pluses);
+dropChange(mines);
+
+cancel.addEventListener('click', function () {
+    for (let num of nums) {
+        num.innerHTML = 0;
+        num.previousElementSibling.classList.add('disable_border');
+        num.previousElementSibling.children[0].classList.add('disable_color');
+        dropblock.children[0].innerHTML = 'Сколько гостей';
+    }
+});
+
+dropblock.addEventListener('click', function () {
+    if (droppyex.style.display == 'flex') {
+        droppyex.style.display = 'none';
+    } else {
+        droppyex.style.display = 'flex';
+    }
+
+});
+
+ok.addEventListener('click', function () {
+    droppyex.style.display = 'none';
+});
 
 // функции 
+
+function changeFirstData(e) {
+    let t = e.target;
+    if (t.dataset.date && !t.classList.contains('-disabled-')) {
+        arrive.children[0].innerHTML = zero(t.dataset.date + '.' + t.dataset.month + '.' + t.dataset.year);
+        calendar.removeEventListener('click', changeFirstData);
+        click = 2;
+        calendar.addEventListener('click', changeLastData);
+    }
+}
+
+function changeLastData(e) {
+    let t = e.target;
+    if (t.dataset.date && !t.classList.contains('-disabled-')) {
+        if (t.classList.contains('-range-from-')) {
+            embred.children[0].innerHTML = arrive.children[0].innerHTML;
+            arrive.children[0].innerHTML = zero(t.dataset.date + '.' + t.dataset.month + '.' + t.dataset.year);
+        } else {
+            embred.children[0].innerHTML = zero(t.dataset.date + '.' + t.dataset.month + '.' + t.dataset.year);
+        }
+
+        click = 1;
+        calendar.removeEventListener('click', changeLastData);
+        calendar.addEventListener('click', changeFirstData);
+    }
+}
 
 function changeName(names, arr) {
 
@@ -47,8 +139,69 @@ function changeName(names, arr) {
 
 }
 
+function calUp(elem) {
+
+    elem.addEventListener('click', function () {
+
+        if (calendar.style.display == 'block') {
+            calendar.style.display = 'none';
+
+        } else {
+            calendar.style.display = 'block';
+            droppyex.style.display = 'none';
+        }
+
+    });
+
+}
+
+function zero(str) {
+
+    let arr = str.split('.');
+
+    arr = arr.map(function (el) {
+        if (el < 10 && el !== '0') {
+            return '0' + el;
+        } else if (el === '0') {
+            return 12;
+        } else {
+            return el;
+        }
+    });
+    return arr.join('.');
+}
 
 
+function dropChange(pars) {
+    for (let par of pars) {
 
+        par.addEventListener('click', function () {
 
+            for (let num of nums) {
 
+                sum += parseInt(num.innerHTML);
+            }
+
+            if (nums[2].innerHTML == 0) {
+                if (sum == 1) {
+                    dropblock.children[0].innerHTML = sum + ' гость';
+                } else if (sum == 2 || sum == 3 || sum == 4) {
+                    dropblock.children[0].innerHTML = sum + ' гостя';
+                } else {
+                    dropblock.children[0].innerHTML = sum + ' гостей';
+                }
+            } else {
+                if (sum == 1) {
+                    dropblock.children[0].innerHTML = sum + ' гость' + ' ' + nums[2].innerHTML + ' ' + 'младенец';
+                } else if (sum == 2 || sum == 3 || sum == 4) {
+                    dropblock.children[0].innerHTML = sum + ' гостя' + ' ' + nums[2].innerHTML + ' ' + 'младенца';
+                } else {
+                    dropblock.children[0].innerHTML = sum + ' гостей' + ' ' + nums[2].innerHTML + ' ' + 'младенцев';
+                }
+            }
+            sum = 0;
+
+        });
+
+    }
+}

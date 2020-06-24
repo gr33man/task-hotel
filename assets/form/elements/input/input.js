@@ -1,5 +1,5 @@
 
-dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
+export default dinamicDrop;
 
 function dinamicDrop(min, plus, num) {
 

@@ -12,6 +12,7 @@ body {
     @import '../../foothead/puggy/header1/header1.scss';
     @import '../../cards/calendar/calendar.scss';
     @import '../../foothead/puggy/info/info.scss';
+    @import '../../form/elements/input/input.scss';
     
     
     .header1 {
@@ -67,11 +68,25 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
 
+        & .datepicker-here {
+            position: absolute;
+            top: 391px;
+            left: 217px;
+            display: none;
+        }
+
         & .searcher {
             position: absolute;
             background-color: white;
             top: 200px;
             left: 187px;
+        }
+
+        & .droppyex {
+            position: absolute;
+            top: 465px;
+            left: 217px;
+            display: none;
         }
 
         &__slogan {
