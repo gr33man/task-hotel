@@ -2,7 +2,7 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=1170")
+        meta(name="viewport", content="width=device-width")
         link( rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
         link(rel="stylesheet" href="../../node_modules/air-datepicker/dist/css/datepicker.min.css" type="text/css")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
@@ -11,16 +11,15 @@ html(lang="en")
         include ../../cards/calendar/calendar.pug
         include ../../form/elements/input/input.pug
     body
+        
         include ../../foothead/puggy/header1/header1.pug 
-        i.material-icons#mi1 expand_more 
-        i.material-icons#mi2 expand_more
         div.picfone
             +searchroom
             +calendar
             +expendedImprove(['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'], 'применить','очистить')
             p.picfone__slogan 
-                               | Лучшие номера для вашей работы, 
-                               | отдыха и просто вдохновения  
+                                | Лучшие номера для вашей работы, 
+                                | отдыха и просто вдохновения  
         include ../../foothead/puggy/info/info.pug
 
 

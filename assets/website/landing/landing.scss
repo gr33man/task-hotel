@@ -7,7 +7,6 @@
 
 
 body {
-    min-width: 1170px;
     margin: 0;
     @import '../../foothead/puggy/header1/header1.scss';
     @import '../../cards/calendar/calendar.scss';
@@ -15,95 +14,113 @@ body {
     @import '../../form/elements/input/input.scss';
     
     
-    .header1 {
-        margin-top: 0;
-       
-        .bar1 {
-            margin-left: 285px;
-          
-
-            &__el1:nth-child(1) {
-                & a {
-                   font-weight: normal;
-                   color: rgba(31, 32, 65, 0.5) !important;
-
-                   
-                }
-            }
-        }
-
-        .toxic1 {
-            margin-left: 140px;
-        }
-
-        .btn1 {
-            
-            width: 293px;
-            margin-left: 40px;
-           
-
-            &__reg1 {
-                width: 196px;
-            }
-        }
+    %gull {
+        display: inline-block;
+        border: 2px solid rgba(31,32,65,.5);
+        transform: translateY(-50%) rotate(45deg);
+        border-top: 0;
+        border-left: 0; 
+        width: 7px;
+        height:7px;
+        margin-left: 6px;
+        margin-bottom: -1px;
     }
 
-    #mi1 {
-      position: absolute;
-      left: 847px;
-      top: 24px;
-      color: rgba(31, 32, 65, 0.5);
-      cursor: pointer;
-    }
-
-    #mi2 {
-       @extend #mi1;
-       left: 1317px;
-    } 
-
-    .picfone {
-        background-image: url("../../img/landing.svg");
-        height: 1022px;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        & .datepicker-here {
-            position: absolute;
-            top: 391px;
-            left: 217px;
-            display: none;
-        }
-
-        & .searcher {
-            position: absolute;
-            background-color: white;
-            top: 200px;
-            left: 187px;
-        }
-
-        & .droppyex {
-            position: absolute;
-            top: 465px;
-            left: 217px;
-            display: none;
-        }
-
-        &__slogan {
-            width: 267px;
-            height: 48px;
-            text-align: right;
-            font-family: 'Montserrat';
-            font-size: 14px;
-            color: rgba(31, 32, 65, 0.75);
-            position: absolute;
-            top: 1015px;
-            right: 181px;
-        }
         
        
+
+    .header1 {
+            margin-top: 0;
+            max-width: 100%;
+           
+            .bar1 {
+                margin-left: 285px;
+            
+
+                &__el1:nth-child(1) {
+                    & a {
+                    font-weight: normal;
+                    color: rgba(31, 32, 65, 0.5) !important;
+                    }
+                }
+
+                &__el1:nth-child(2)::after {
+                    content: '';
+                    @extend %gull;
+                }
+
+                &__el1:nth-child(5)::after {
+                    content: '';
+                    @extend %gull;
+                }
+
+
+            }
+
+            .toxic1 {
+                margin-left: 140px;
+            }
+
+            .btn1 {
+                
+                width: 293px;
+                margin-left: 40px;
+            
+
+                &__reg1 {
+                    width: 196px;
+                }
+            }
     }
 
-   
+    .picfone {
+            background-image: url("../../img/landing.svg");
+            height: 1022px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+           
+            
+           
+
+            
+
+            & .datepicker-here {
+                position: absolute;
+                top: 391px;
+                left: 216px;
+                display: none;
+            } 
+
+            & .searcher {
+                position: absolute;
+                background-color: white;
+                top: 200px;
+                left: 282px;
+            } 
+
+            & .droppyex {
+                position: absolute;
+                top: 465px;
+                left: 187px;
+                display: none;
+            } 
+
+            &__slogan {
+                width: 267px;
+                height: 48px;
+                text-align: right;
+                font-family: 'Montserrat';
+                font-size: 14px;
+                color: rgba(31, 32, 65, 0.75);
+                position: absolute;
+                top: 1015px;
+                right: 239px;
+            } 
+            
+        
+    } 
+
+}       
     
-}

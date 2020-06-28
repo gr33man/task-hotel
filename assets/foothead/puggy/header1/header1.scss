@@ -14,6 +14,7 @@
         box-sizing: border-box;
         @extend %fone;
         display: flex;
+       
         
 
         .toxic1 {
@@ -23,26 +24,7 @@
         @import "../../../sign/toxin.scss";
         
 
-        @media (max-width: 1639px) {
-            .toxic1 {
-               margin-right: -200px;
-            }
-            .bar1 {
-                
-                .bar1__el1 {
-                    font-size: 14px;
-                    margin-right: -115px;
-                }
-            }
-
-            .btn1 {
-                
-               .btn1__log1 {
-                   margin-right: 8px;
-               }
-               
-            }
-        } 
+      
       
 
         .bar1 {
