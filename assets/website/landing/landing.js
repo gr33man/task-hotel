@@ -19,6 +19,11 @@ let click = 1;
 let clear = document.getElementsByClassName('clear')[0];
 let confirm = document.getElementsByClassName('confirm')[0];
 
+let burger = document.getElementsByClassName('burger')[0];
+let bar1 = document.getElementsByClassName('bar1')[0];
+let searcher = document.getElementsByClassName('searcher')[0];
+let btn1 = document.getElementsByClassName('btn1')[0];
+
 
 let dropblock = document.getElementsByClassName('dropblock')[0];
 let pluses = document.getElementsByClassName('elements__numbers__circle2');
@@ -36,6 +41,15 @@ blocktext.children[0].innerHTML = 'Подписка';
 blocktext.children[1].children[0].innerHTML = 'Получайте специальные предложения и новости сервиса';
 blocktext.nextElementSibling.placeholder = 'Email';
 links.children[0].innerHTML = 'Copyright © 2018 Toxin отель. Все права зачищены';
+
+burger.onclick = function () {
+    this.classList.toggle('chrest');
+    bar1.classList.toggle('chrest');
+    searcher.classList.toggle('chrest');
+    btn1.classList.toggle('chrest');
+}
+
+
 
 
 btn_log.innerHTML = 'ВОЙТИ';

@@ -2,19 +2,20 @@
 
 %block {
     position: absolute;
-    width: 143px;
+    width: 143px;//143px;
     height: 168px;
     top: 104px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
+    justify-content: space-between; 
+
 }
 
 %icons {
     position: absolute;
-    right: 239px;
-    top: 23px;
+    right: 7.29%;
     display: flex;
+    padding: 12px 0 12px 0;
     justify-content: space-between;
     font-size: 24px;
     width: 92px;
@@ -34,32 +35,6 @@
 }
 
 
-/* @media (max-width:1639px) {
-    .footer1 {
-
-  
-
-        .navigation{
-            margin-left: -60px;
-            
-        }
-        .about {
-           margin-left: -120px;
-           
-        }
-        .support {
-            margin-left: -180px;
-             
-         }
-
-         .postup {
-            margin-left: -270px;
-            
-            
-         }
-    }
-
-}   */
 
 .footer1 {
     margin-top: 40px;
@@ -67,14 +42,20 @@
     height: 443px;
     background: #FFFFFF;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+   
+   
 
     
     .emblem {
-        width: 280px;
+        width: 18%; //280px;
         height: 156px;
         position: absolute;
-        left: 280px;
+        left: 7.29%;//140px;
         top:100px;
+
+        @media (max-width:1158px ) {
+            left: 2%;
+        }
         
        
         &__tox{
@@ -83,7 +64,7 @@
 
             & p {
                 font-family: 'Montserrat';
-                width: 260px;
+                width: 92.85%;//260px;
                 font-size: 14px;
                 line-height: 24px;
                 color: rgba(31, 32, 65, 0.75);
@@ -91,43 +72,58 @@
         }
 
         
-    }
+    } 
 
     
 
     .navigation {
        @extend %block;
-       left: 650px;
+       left: 31.77%;//610px;
+
+       @media (max-width:1158px ) {
+        left: 28%;
+        }
     }
 
     .about {
         @extend %block; 
-        left: 890px;
+        left: 49.95%;//940px;
         top: 104px; 
-        width: 82px;
+        width: 82px;//82px;
         height: 168px; 
+
     }
 
     .support {
         @extend %block; 
-        left: 1120px;
+        left: 63.54%;//1220px;
         top: 104px; 
         height: 130px;
-        width: 153px;
+        width: 153px;//153px;
     }
 
     .postup{
-        width: 260px;
-        height: 142px;
-        left: 1405px;
+        width: 13.54%;//260px;
+        //height: 142px;
+        right: 5.29%;//1515px;
         top: 98px; 
         position: absolute;
+
+        @media (max-width:1158px ) {
+            right: 2%;
+        }
+        
+       
        
         .blocktext {
             position: relative;
             top: 0;
-            width: 208px;
+            width: 208px;//208px;
             height: 84px;
+
+            @media (max-width:1348px ) {
+                width: 98%;
+            }
            
             &__title {
                 font-family: 'Montserrat';
@@ -142,20 +138,26 @@
                 font-family: 'Montserrat';
                 font-size: 14px;
                 line-height: 24px;
-                 margin-top: 10px;
-                 color: rgba(31, 32, 65, 0.75);
+                margin-top: 10px;
+                color: rgba(31, 32, 65, 0.75);
             }
         }    
 
         &__input {
             height: 44px;
-            width: 258px;
+            width: 99.23%;//258px;
             margin-top: 30px;
             border: 1px solid rgba(31, 32, 65, 0.25);
             box-sizing: border-box;
             border-radius: 4px;
             outline: none;
-              
+
+            @media (max-width:1348px ) {
+               margin-top: 42px;
+            }
+
+           
+            
         }
 
         &__input::placeholder{
@@ -163,23 +165,26 @@
             font-style: normal;
             font-weight: normal;
             font-size: 14px;
-            padding-left: 2px;
+            padding-left: 0.77%;//2px;
             color: rgba(31, 32, 65, 0.25);
         }
 
         & a i {
             position: absolute;
-            width: 44px;
+            width: 44px;//44px;
             height: 44px;
-            bottom: -25px;
-            left: 227px;
+            bottom: -10px;
+            left:7.29% + 77%;//227px;
             color: #BC9CFF;
             font-size: 24px;
-        }
 
+            @media (max-width:1158px ) {
+                left: 2% + 77%;
+            }
+        }
         
-        
-    }
+       
+    } 
 
 
     .menu {
@@ -191,24 +196,37 @@
      }
 
     .links {
-        height: 70px;
         position: absolute;
-        top:373px;
+        bottom: 0;
         width: 100%;
         border-top: 1px solid #E5E5E5;
-
+       
         
+    
 
         & p{
             position: absolute;
-            top: 4px;
-            width: 367px;
-            height: 18px;
-            left: 270px;
+            left: 7.29%;
             font-family: 'Montserrat';
             color: rgba(31, 32, 65, 0.75);
             font-size: 14px;
             line-height: 17px;
+
+            @media (max-width:1158px){
+                left: 2%;
+            }
+
+            @media (max-width: 488px ) {
+               top: 0;
+               left: 0;
+               position: static;
+               text-align: center;
+
+             
+              
+               
+              
+            }
             
         }
 
@@ -217,10 +235,24 @@
         &__icons{
            
           @extend %icons;
+
+          @media (max-width:1158px ){
+            right: 2%;
+          }
+
+          @media (max-width: 488px ) {
+            left: 0;
+            position: static;
+            margin: 0 auto;
+            padding: 0;
+
+           
+         }
         }
 
         &__icons a {
             color:#BC9CFF;
+
         }
 
         &__icons a:hover {

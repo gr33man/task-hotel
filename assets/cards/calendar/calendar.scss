@@ -4,8 +4,8 @@
 
 .datepicker-here {
 
-    position: absolute;    
-
+    position: absolute;
+ 
     .butcont {
         position: absolute;
         width: 280px;
@@ -14,6 +14,10 @@
         left: 20px;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width:398px) {
+            width: 80%;
+        }
 
 
         & span {
@@ -28,6 +32,11 @@
 
         & .confirm {
             color: #BC9CFF;
+
+            @media (max-width:398px) {
+        
+              margin-right: 10%; 
+            }
         }
 
         & .clear {
@@ -45,6 +54,11 @@
             padding: 10px 10px 60px 10px;
             font-size: 12px;
             line-height: 15px;
+
+            @media (max-width:398px) {
+                width: 80%;
+                
+            }
 
 
             &--nav {
@@ -178,11 +192,56 @@
 
 
 .searcher {
-    width: 380px;
+    width:380px;
     height: 374px;
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+   
+    
+
+    @media (max-width:398px) {
+        width: 95%;
+        height: 424px;
+
+        .boxinp:nth-child(4) {
+           width: 80%;
+           margin-top: 60px;
+           left: 0;
+           margin-left: 10%;
+        
+           & .dropblock {
+                width: 100%;
+               
+                & i {
+                    margin-left: 87%;
+                }
+           }
+        }
+
+        .boxinp:nth-child(3),  .boxinp:nth-child(2){
+            position: static !important;
+            margin-left: 10%;
+            margin-top: 10px;
+            width: 80% !important;
+
+            & .dropblockshort {
+                width: 100%;
+           
+                & i {
+                    margin-left: 88%;
+                }
+            } 
+          
+        }
+
+        & .btnclick {
+            width: 78% !important;
+            margin-top: 50px;
+            margin-left: 2%;
+        } 
+       
+    } 
     
     &__title {
         font-family: 'Quicksand',sans-serif;
