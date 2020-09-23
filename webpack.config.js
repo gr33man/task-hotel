@@ -34,6 +34,7 @@ module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
         landing: './website/landing/landing.js',
+        registr: './website/registr/registr.js'
     },
     output: {
         filename: '[name].js',
@@ -74,8 +75,14 @@ module.exports = {
     },
 
     plugins: [
+        /*  new Html({
+             template: './website/landing/landing.pug',
+             minify: {
+                 collapseWhitespace: isProd
+             }
+         }), */
         new Html({
-            template: './website/landing/landing.pug',
+            template: './website/registr/registr.pug',
             minify: {
                 collapseWhitespace: isProd
             }

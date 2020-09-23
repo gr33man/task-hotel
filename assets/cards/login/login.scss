@@ -1,15 +1,15 @@
-@import "../form/elements/input/input.scss";
-@import "../form/elements/check/check.scss";
-@import "../form/elements/shell/shell.scss";
-@import "../form/elements/button/button.scss";
+@import "../../form/elements/input/input.scss";
+@import "../../form/elements/check/check.scss";
+@import "../../form/elements/shell/shell.scss";
+@import "../../form/elements/button/button.scss";
 
 .logged {
     width: 380px;
     height: 358px;
-    @extend %envirfone;
+    @extend %envirfone !optional;
 
     &__title {
-        @extend %fontstyle;
+        @extend %fontstyle !optional;
         position: absolute;
         left: 30px;
         top: 40px;
@@ -66,10 +66,10 @@
 .regisacc {
     width: 380px;
     height: 646px;
-    @extend %envirfone;
+    @extend %envirfone !optional;
 
     &__title {
-       @extend %fontstyle;
+       @extend %fontstyle !optional;
        display: inline-block;
        position: absolute;
        left: 60px;

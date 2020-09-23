@@ -45,7 +45,7 @@ links.children[0].innerHTML = 'Copyright © 2018 Toxin отель. Все пра
 burger.onclick = function () {
     this.classList.toggle('chrest');
     bar1.classList.toggle('chrest');
-    searcher.classList.toggle('chrest');
+    if (searcher) searcher.classList.toggle('chrest');
     btn1.classList.toggle('chrest');
 }
 
