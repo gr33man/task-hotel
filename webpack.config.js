@@ -35,7 +35,8 @@ module.exports = {
     entry: {
         landing: './website/landing/landing.js',
         registr: './website/registr/registr.js',
-        signin: './website/signin/signin.js'
+        signin: './website/signin/signin.js',
+        signin: './website/inroom/inroom.js'
     },
     output: {
         filename: '[name].js',
@@ -92,6 +93,13 @@ module.exports = {
         new Html({
             template: './website/signin/signin.pug',
             filename: 'signin.html',
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './website/inroom/inroom.pug',
+            filename: 'inroom.html',
             minify: {
                 collapseWhitespace: isProd
             }
