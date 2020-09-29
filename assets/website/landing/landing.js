@@ -24,6 +24,7 @@ let bar1 = document.getElementsByClassName('bar1')[0];
 let searcher = document.getElementsByClassName('searcher')[0];
 let btn1 = document.getElementsByClassName('btn1')[0];
 let regisacc = document.getElementsByClassName('regisacc')[0];
+let logged = document.getElementsByClassName('logged')[0];
 
 
 let dropblock = document.getElementsByClassName('dropblock')[0];
@@ -48,6 +49,7 @@ burger.onclick = function () {
     bar1.classList.toggle('chrest');
     if (searcher) searcher.classList.toggle('chrest');
     if (regisacc) regisacc.classList.toggle('chrest');
+    if (logged) logged.classList.toggle('chrest');
     btn1.classList.toggle('chrest');
 }
 

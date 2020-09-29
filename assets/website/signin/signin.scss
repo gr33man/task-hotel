@@ -29,22 +29,33 @@ body {
                     border-radius: 5px;
 
                     &.chrest {
-                        top: 220px;
+                        top: 240px;
                     }
 
                     @media (max-width:499px) {
                         width: 80%;
 
+                        & .inp, & .btnclick:nth-child(even), & .togglecont {
+                            width: 80%;
+                        }
+
+                        &__enter {
+                            width: 80%;
+
+                            & .btnclick:nth-child(2) {
+                                width: 38%;
+                                margin-left: 5px;
+                            }
+
+                            &__text {
+                                width: 70%;
+                            }
+                        }
+
                         
                     }
 
-                    @media(max-width:458px) and (min-width:382px) {
-                       
-                    }
-
-                    @media (max-width:406px) {
-                       
-                    }
+        
                 }
         }
     }    
