@@ -34,7 +34,8 @@ module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
         landing: './website/landing/landing.js',
-        registr: './website/registr/registr.js'
+        registr: './website/registr/registr.js',
+        signin: './website/signin/signin.js'
     },
     output: {
         filename: '[name].js',
@@ -84,6 +85,13 @@ module.exports = {
         new Html({
             template: './website/registr/registr.pug',
             filename: 'registr.html',
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './website/signin/signin.pug',
+            filename: 'signin.html',
             minify: {
                 collapseWhitespace: isProd
             }

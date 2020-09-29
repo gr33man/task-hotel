@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    @import '../../foothead/puggy/header1/header1.scss';
+    @import '../../foothead/puggy/info/info.scss';
+    @import '../../form/elements/input/input.scss';
+    @import '../../cards/login/login.scss';
+    
+
+    .contbox3 {
+        max-width: 1920px;
+        
+        .picfone3 {
+                background-image: url("../../img/loggin.svg");
+                max-width: 100%;
+                width: 100%;
+                background-position: center;
+                height: 772px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: initial;
+                background-position-y: bottom;
+                position: relative;
+
+                & .logged {
+                    position: relative;
+                    top: 172px;
+                    margin: 0 auto; 
+                    background-color: white;
+                    border-radius: 5px;
+
+                    &.chrest {
+                        top: 220px;
+                    }
+
+                    @media (max-width:499px) {
+                        width: 80%;
+
+                        
+                    }
+
+                    @media(max-width:458px) and (min-width:382px) {
+                       
+                    }
+
+                    @media (max-width:406px) {
+                       
+                    }
+                }
+        }
+    }    
+}    
