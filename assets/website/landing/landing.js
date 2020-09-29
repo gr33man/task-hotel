@@ -23,6 +23,7 @@ let burger = document.getElementsByClassName('burger')[0];
 let bar1 = document.getElementsByClassName('bar1')[0];
 let searcher = document.getElementsByClassName('searcher')[0];
 let btn1 = document.getElementsByClassName('btn1')[0];
+let regisacc = document.getElementsByClassName('regisacc')[0];
 
 
 let dropblock = document.getElementsByClassName('dropblock')[0];
@@ -46,6 +47,7 @@ burger.onclick = function () {
     this.classList.toggle('chrest');
     bar1.classList.toggle('chrest');
     if (searcher) searcher.classList.toggle('chrest');
+    if (regisacc) regisacc.classList.toggle('chrest');
     btn1.classList.toggle('chrest');
 }
 
@@ -59,8 +61,10 @@ bars[bars.length - 1].parentElement.removeChild(bars[bars.length - 1]);
 changeName(bars, menuBars);
 changeName(menues, arrForMenu);
 
-calUp(arrive);
-calUp(embred);
+if (arrive) calUp(arrive);
+
+if (embred) calUp(embred);
+
 
 $('.datepicker-here').datepicker({
     navTitles: {
@@ -72,44 +76,54 @@ $('.datepicker-here').datepicker({
 
 dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
 
-calendar.addEventListener('click', changeFirstData);
+if (calendar) calendar.addEventListener('click', changeFirstData);
 
-confirm.addEventListener('click', function () {
-    calendar.style.display = 'none';
-});
+if (confirm) {
+    confirm.addEventListener('click', function () {
+        calendar.style.display = 'none';
+    });
+}
 
-clear.addEventListener('click', function () {
-    let origin = 'ДД.ММ.ГГГГ';
-    arrive.children[0].innerHTML = origin;
-    embred.children[0].innerHTML = origin;
-});
+if (clear) {
+    clear.addEventListener('click', function () {
+        let origin = 'ДД.ММ.ГГГГ';
+        arrive.children[0].innerHTML = origin;
+        embred.children[0].innerHTML = origin;
+    });
+}
 
 
 
 dropChange(pluses);
 dropChange(mines);
 
-cancel.addEventListener('click', function () {
-    for (let num of nums) {
-        num.innerHTML = 0;
-        num.previousElementSibling.classList.add('disable_border');
-        num.previousElementSibling.children[0].classList.add('disable_color');
-        dropblock.children[0].innerHTML = 'Сколько гостей';
-    }
-});
+if (cancel) {
+    cancel.addEventListener('click', function () {
+        for (let num of nums) {
+            num.innerHTML = 0;
+            num.previousElementSibling.classList.add('disable_border');
+            num.previousElementSibling.children[0].classList.add('disable_color');
+            dropblock.children[0].innerHTML = 'Сколько гостей';
+        }
+    });
+}
 
-dropblock.addEventListener('click', function () {
-    if (droppyex.style.display == 'flex') {
+if (dropblock) {
+    dropblock.addEventListener('click', function () {
+        if (droppyex.style.display == 'flex') {
+            droppyex.style.display = 'none';
+        } else {
+            droppyex.style.display = 'flex';
+        }
+
+    });
+}
+
+if (ok) {
+    ok.addEventListener('click', function () {
         droppyex.style.display = 'none';
-    } else {
-        droppyex.style.display = 'flex';
-    }
-
-});
-
-ok.addEventListener('click', function () {
-    droppyex.style.display = 'none';
-});
+    });
+}
 
 // функции 
 
@@ -154,7 +168,6 @@ function changeName(names, arr) {
 }
 
 function calUp(elem) {
-
     elem.addEventListener('click', function () {
 
         if (calendar.style.display == 'block') {
@@ -164,6 +177,8 @@ function calUp(elem) {
             calendar.style.display = 'block';
             droppyex.style.display = 'none';
         }
+
+
 
     });
 

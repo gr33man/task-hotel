@@ -75,14 +75,15 @@ module.exports = {
     },
 
     plugins: [
-        /*  new Html({
-             template: './website/landing/landing.pug',
-             minify: {
-                 collapseWhitespace: isProd
-             }
-         }), */
+        new Html({
+            template: './website/landing/landing.pug',
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
         new Html({
             template: './website/registr/registr.pug',
+            filename: 'registr.html',
             minify: {
                 collapseWhitespace: isProd
             }

@@ -13,6 +13,7 @@ body {
     @import '../../foothead/puggy/info/info.scss';
     @import '../../form/elements/input/input.scss';
 
+
     
     
     .contbox {
@@ -21,12 +22,13 @@ body {
         .picfone {
                 background-image: url("../../img/landing.svg");
                 max-width: 100%;
-                height: 1022px;
-                background-repeat: no-repeat;
-                background-size: cover;
-                -webkit-background-size: cover;
                 background-position: center center;
-                background-attachment: fixed; 
+                height: 722px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: initial;
+                background-position-y: bottom;
+                position: relative;
                
                 @media (max-width:1628px ) {
                    
@@ -111,37 +113,11 @@ body {
                     font-size: 14px;
                     color: rgba(31, 32, 65, 0.75);
                     position: absolute;
-                    top: 1015px;
+                    top: 665px;
                     right: 140px;
                 } 
                 
             
-        }
-        
-        
-        @media (max-width:998px ) {
-            .navigation,.about,.support,.postup {
-                display: none;
-            }
-
-            .emblem {
-               width: 80%;
-               position: relative;
-               margin: 0 auto;
-               
-
-               &__tox .toxin {
-                    margin: 0 auto;
-               }
-
-               &__tox p {
-                   text-align: center;
-                   width: 100%;
-                }
-             }
-              
-          
-           
         }
     }
 }       

@@ -1,18 +1,10 @@
-@font-face {
-    font-family: 'Quicksand';
-    font-family: 'Montserrat';
-    src: url('../../fonts/quicksand.ttf') format('truetype');
-    src: url('../../fonts/montserrat.ttf') format('truetype');
-}
-
-
 body {
     margin: 0;
     @import '../../foothead/puggy/header1/header1.scss';
     @import '../../foothead/puggy/info/info.scss';
     @import '../../form/elements/input/input.scss';
     @import '../../cards/login/login.scss';
-
+    
 
     .contbox2 {
         max-width: 1920px;
@@ -30,38 +22,63 @@ body {
                 position: relative;
 
                 & .regisacc {
-                   position: relative;
-                   top: 19px;
-                   margin: 0 auto;
-                   
-                   background-color: white;
-                   border-radius: 5px;
+                    position: relative;
+                    top: 19px;
+                    margin: 0 auto; 
+                    background-color: white;
+                    border-radius: 5px;
+
+                    &.chrest {
+                        top: 220px;
+                        z-index: 3;
+                    }
+
+                    @media (max-width:499px) {
+                        width: 80%;
+
+                        & .inp, & .btnclick, & .togglecont {
+                            width: 80%;
+                        }
+
+                        & .boxinp {
+                            width: 100%;
+                        }
+
+                        & .enter {
+                            width: 80%;
+
+                            & .btnclick {
+                                width: 30%;
+                            }
+
+                            &__text {
+                                width: 70%;
+                            }
+                        }
+
+                        
+                    }
+
+                    @media(max-width:458px) and (min-width:382px) {
+                        &__title {
+                          right: 40px;  
+                        }
+                    }
+
+                    @media (max-width:406px) {
+                        & .btnclick:nth-child(odd) {
+                            margin-top: 10px;
+
+                            & i {
+                                right: 7px;
+                            }
+                        }
+
+                        & .radmenu {
+                           width: 200px;
+                        }
+                    }
                 }
         }
-        
-        @media (max-width:998px ) {
-            .navigation,.about,.support,.postup {
-                display: none;
-            }
-
-            .emblem {
-               width: 80%;
-               position: relative;
-               margin: 0 auto;
-               
-
-               &__tox .toxin {
-                    margin: 0 auto;
-               }
-
-               &__tox p {
-                   text-align: center;
-                   width: 100%;
-                }
-             }
-              
-          
-           
-        }
-    }
+    }    
 }    

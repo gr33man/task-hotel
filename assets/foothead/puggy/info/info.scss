@@ -42,6 +42,12 @@
     height: 443px;
     background: #FFFFFF;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+
+    @media (max-width:998px ) {
+        .navigation,.about,.support,.postup {
+            display: none;
+        }
+    } 
    
    
 
@@ -56,7 +62,21 @@
         @media (max-width:1158px ) {
             left: 2%;
         }
-        
+         
+        @media (max-width:998px) { 
+           width: 80%;
+           position: relative;
+           margin: 0 auto;
+
+            &__tox .toxin {
+                margin: 0 auto;
+            }
+
+            &__tox p {
+                text-align: center;
+                width: 100%;
+            }
+        }
        
         &__tox{
             @import "../../../sign/toxin.scss";
