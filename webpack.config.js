@@ -36,7 +36,7 @@ module.exports = {
         landing: './website/landing/landing.js',
         registr: './website/registr/registr.js',
         signin: './website/signin/signin.js',
-        signin: './website/inroom/inroom.js'
+        inroom: './website/inroom/inroom.js'
     },
     output: {
         filename: '[name].js',

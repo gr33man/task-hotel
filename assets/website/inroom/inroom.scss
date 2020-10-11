@@ -4,11 +4,313 @@ body {
     @import '../../foothead/puggy/info/info.scss';
     @import '../../form/elements/input/input.scss';
     @import '../../cards/login/login.scss';
+    @import '../../form/elements/comment/comment.scss';
+    @import '../../cards/calendar/calendar.scss';
     
+    @mixin roomsize($width,$height,$img) {
+        max-width: 100%;
+        width: #{$width};
+        background-image: url(#{$img});
+        height: #{$height};
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: initial;
+        background-position-y: bottom;
+        position: relative;
+    }
 
-    .contbox2 {
+    .contbox4 {
         max-width: 1920px;
         
-       
+        
+        .hotel {
+            position: relative;
+            width: 100%;
+            
+            &__room1 {
+               @include roomsize('70%','485px','../../img/inroom.svg');
+
+               @media (max-width:1299px) {
+                   width:100%;
+               }
+            }
+
+            &__room2 {
+                @include roomsize('30%','244px','../../img/inroom2.svg');
+                position:absolute;
+                top: 0;
+                right: 0;
+                @media (max-width:1299px) {
+                    width:50%;
+                    top: 485px;
+                    left: 0;
+                }
+            }
+
+            &__room3 {
+                @include roomsize('30%','243px','../../img/inroom3.svg');
+                position:absolute;
+                right: 0;
+                bottom: 0;
+
+                @media (max-width:1299px) {
+                    width:50%;
+                    top: 485px;
+                    right: 0;
+                }
+            }
+            
+        }
+
+        .roomdata {
+            margin-left:7.29%;//140px;
+            left: 0;
+            top: 70px;
+            position: relative;
+            height: 1100px;
+
+            @media (max-width:1299px) {
+               top: 280px;
+               height: 1280px;
+            }
+
+            @media (max-width:1159px) {
+                margin-left: 2.29%;
+                height: 2000px;
+            }
+
+            @media (max-width:759px) {
+                height: 2300px;
+            }
+
+            @media (max-width:589px) {
+                height: 2700px;
+            }
+
+
+
+            &__info {
+                position: absolute;
+                top: 0;
+                left: 0;
+        
+
+                & p {
+                    font-family: 'Quicksand',sans-serif;
+                    font-weight: bold;
+                    font-size: 19px;
+                }
+
+                & hr {
+                    border: 0.25px solid rgba(31, 32, 65, 0.1);
+                    margin: 17px 0 23px 0;
+                }
+                
+            }
+
+            &__service {
+                position: absolute;
+                top: 0;
+                left: 340px;
+
+                @media(max-width:589px) {
+                    left: 0;
+                    top: 300px;
+                }
+
+
+
+                & p {
+                    font-family: 'Quicksand',sans-serif;
+                    font-weight: bold;
+                    font-size: 19px; 
+                }
+
+                & svg g text:first-child {
+                    fill: #bc9cff;
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-align: center;
+                    margin-top: 2.3571rem;
+                    font-family: 'Quicksand',sans-serif;         
+                }
+                & svg g text:last-child {
+                    @extend text:first-child;
+                    font-size: 12px;
+                }
+
+                & .list {
+                    float:right;
+                    margin-top: 30px;
+                    list-style-type: none;
+
+                    @media(max-width:1299px) {
+                        float: none;
+                        padding-left: 0;
+                        
+                    }
+                    
+                    &__el {
+                        & span {
+                            font-size: 16px;
+                            font-weight: 400;
+                            font-family: 'Montserrat';
+                            line-height: 24px;
+                            color: '1F2041' 75%;
+                        }
+                    }
+
+                    &__el::before {
+                        content: '';
+                        display:inline-block;
+                        width: 10px;
+                        height: 10px;
+                        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+                        border-radius: 50px;
+                        margin-right: 6px;
+                        margin-bottom: 1px;
+                    }
+
+                    &__el:nth-child(1)::before {
+                        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+                    }
+
+                    &__el:nth-child(2)::before {
+                        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                    }
+
+                    &__el:nth-child(3)::before {
+                        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                    }
+
+                    &__el:nth-child(1)::before {
+                        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+                    }
+                }
+            }
+
+            &__reviews {
+                position: absolute;
+                width: 722px;
+                top: 373px;
+
+                @media(max-width:1259px) {
+                   width: 55%;
+                }
+
+                @media(max-width:879px) {
+                   width: 90%;
+                }
+
+                @media(max-width:589px) {
+                    top: 600px;
+                }
+
+                @media(max-width: 399px) {
+                 width: 90%;        
+                }
+                
+
+                & p {
+                    font-family: 'Quicksand',sans-serif;
+                    font-weight: bold;
+                    font-size: 19px;
+                    margin-top: 50px;
+                    
+                    
+                    & span {
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                        font-family: 'Montserrat';
+                        font-size: 14px;
+                        color: '1F2041';
+                        font-weight: normal;
+
+                        @media(max-width: 399px) {
+                          position: relative;
+                        }
+                    }
+                }
+
+                & .commentblock {
+                    margin-top: 23px;
+                    
+                    @media (max-width:1059px) {
+                        margin-bottom: 100px;
+                    }
+
+                    @media(max-width:589px) {
+                        margin-bottom: 200px;
+                    }
+
+                    @media(max-width:1259px) {
+                        width: 100%;
+
+                        & .usercomment__chater {
+                            width: 90%;
+                        }
+                    }
+                }
+                                   
+                }
+
+                & .nope {
+                    width: 341px;
+                    height: 140px;
+                    position: relative;
+                    bottom: 210px;
+                    left: 400px;
+
+
+                    @media (max-width:759px) {
+                        left: 0;
+                        top: 50px;
+                    }
+
+                    @media (max-width:349px) {
+                       width: 85%;
+                    }
+
+                    &__body {
+                        font-size: 14px;
+                        font-weight: normal;
+                        margin-top: 20px;
+                        font-family: 'Montserrat';
+                        line-height: 24px;
+                    }
+                } 
+            }
+
+            .pricebody {
+                position: absolute;
+                right: 20.24%;//250px;
+                top: 20px;
+                //display: none;
+
+                @media (max-width:1699px) {
+                    right: 5%;
+                }
+
+                @media (max-width:1159px) {
+                    top: 1200px;
+                    left: 0;
+                }
+
+                @media (max-width:759px) {
+                    top: 1400px;
+                }
+
+                @media (max-width:589px) {
+                   top: 1850px;
+                }
+            }
+
+        }
+        
+        .contbox4 .footer1 {
+            border-top: 1px solid #E5E5E5;
+        }
     }    
-}    
+   

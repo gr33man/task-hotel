@@ -294,13 +294,92 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
+    @media (max-width:399px) {
+        width: 98%;
+        height: 600px;
+
+        .boxinp:nth-child(3),  .boxinp:nth-child(2){
+            position: static !important;
+            margin-left: 10%;
+            margin-top: 10px;
+            width: 80% !important;
+
+            & .dropblockshort {
+                width: 100%;
+           
+                & i {
+                    margin-left: 88%;
+                }
+            } 
+          
+        }
+
+        .boxinp:nth-child(4) {
+            width: 80.5% !important;
+            margin-top: 60px;
+            left: 0;
+            margin-left: 1%;
+         
+            & .dropblock {
+                 width: 100%;
+                
+                 & i {
+                     margin-left: 87%;
+                 }
+            }
+        }
+
+        &__boxprice {
+            width: 80% !important;
+            margin-top: 80px;
+           
+            & .priceitems {
+                width: 55% !important;
+                
+
+                & .namelist {
+                  width: 100%;
+                  padding-bottom:5px;
+                }
+            }
+        }
+
+        & .allcost {
+            width: 80% !important;
+            display: inline-block;
+
+            &__dot {
+               width: 50% !important;
+
+               @media(max-width: 351px) {
+                width: 43% !important;
+               }
+              
+            }
+        }
+
+        & .btnclick {
+            width: 78% !important;
+            margin-top: 50px;
+            margin-left: 2%;
+        } 
+
+    }
+
     & p.string {
         font-family: 'Montserrat';
         font-size: 14px;
         color: black;
         font-weight: bold;
-        padding-left: 30px;
+        margin-left: 30px;
         margin-top: 40px;
+        position: relative;
+
+        @media (max-width:399px) {
+            width: 80%;
+            margin-left: 10%;
+        }
+
 
         & .number {
            font-size: 24px;
@@ -317,11 +396,16 @@
 
         & .price {
             display: inline-block;
-            margin-left: 24px;
             color: rgba(31, 32, 65, 0.5);
-            margin-left: 110px;
             font-weight: bold;
             font-size: 16px;
+            position: absolute;
+            top: 2px;
+            right: 30px;
+
+            @media (max-width:399px) {
+                right: 0;
+            }
         }
 
         & .end {
@@ -390,6 +474,10 @@
 
         & .circle:nth-child(1) {
             margin-left: 32px;
+
+            @media (max-width:399px) {
+                margin-left: 5px;
+            }
         }
         
         & .priceitems {
@@ -423,7 +511,15 @@
         font-family: 'Quicksand',sans-serif;
         font-weight: bold;
         font-size: 19px;
-        
+        width: 320px;
+       
+
+        &__number {
+            position: absolute;
+            //right: 0;
+            top: 3px;
+            
+        }
 
         &__dot {
            width: 182px;

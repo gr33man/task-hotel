@@ -14,19 +14,17 @@ mixin warning
             li.lister__el= point
 
 
-mixin comments(img, num)
+mixin comments(img,num,name, ago,comment)
     div.commentblock
         div.userinfo
             img(src=img width="96px" height="96px")
             div.datauser
-                span.datauser__name Мурад Сарафанов
+                span.datauser__name #{name}
                 br
-                span.data__time 5 дней назад
+                span.data__time #{ago}
         div.usercomment
-            +likebut(12)
-            span.usercomment__chater.
-                                    Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. 
-                                    И стены,  действительно, шумоподавляющие. Выкрикивал комплименты повару — 
-                                    никто не жаловался из соседей.  
+            +likebut(num)
+            span.usercomment__chater #{comment}
+                                    
            
                 

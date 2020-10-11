@@ -10,12 +10,65 @@ html(lang="en")
         title гостиница Toxin
         include ../../form/elements/input/input.pug
         include ../../cards/login/login.pug
+        include ../../form/elements/comment/comment.pug
+        include ../../cards/calendar/calendar.pug
     body
-        div.contbox2
+        div.contbox4
             include ../../foothead/puggy/header1/header1.pug 
-            
+            div.hotel
+                div.hotel__room1
+                div.hotel__room2
+                div.hotel__room3
+            div.roomdata
+                div.roomdata__info
+                    p Сведения о номере
+                    +discription('sentiment_very_satisfied','Комфорт','Шумопоглощающие стены')
+                    hr
+                    +discription('apartment','Удобство','Окно в каждой из спален')
+                    hr
+                    +discription('whatshot','Уют','Номер оснащён камином')
+                div.roomdata__service
+                    p Впечатление от номере
+                    <svg height="120" width="120">
+                        <circle cx="58" cy="58" r="55" stroke="url(#yellow)" stroke-width="4" fill="none"  stroke-dasharray="172 400" transform="rotate(91 58 58)"/>
+                        <defs><linearGradient id="yellow"><stop offset="0" stop-color="#FFE29C"></stop><stop offset="1" stop-color="#FFBA9C"></stop></linearGradient></defs>
+                        <circle r="55" cx="58" cy="59" stroke="url(#blue)" stroke-width="4" fill="none" stroke-dasharray="80 300" transform="rotate(-88 58 58)"></circle>
+                        <defs><linearGradient id="blue"><stop offset="0" stop-color="#BA9CFE"></stop><stop offset="1" stop-color="#A59FFC"></stop></linearGradient></defs>
+                        <circle r="56" cx="58" cy="57" fill="none" stroke="url(#green)" stroke-width="4" stroke-dasharray="86 400"></circle>
+                        <defs><linearGradient id="green"><stop offset="0" stop-color="#6cd1c1"></stop><stop offset="1" stop-color="#6ecf99"></stop></linearGradient></defs>
+                        <g><text x="40" y="56">260</text><text x="29" y="62" transform="translate(0 19)">голосов</text></g>
+                    </svg>
+                    ul.list
+                        li.list__el
+                            span Великолепно
+                        li.list__el
+                            span Хорошо
+                        li.list__el 
+                            span Удовлеиворительно
+                        li.list__el
+                            span Разочарован
+                div.roomdata__reviews
+                    p Отзывы посетителей номера <span>2 отзыва</span>
+                    +comments('../../img/image.svg',12,'Мурад Сарафанов','5 дней назад',
+                    `Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
+                     И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто
+                     не жаловался из соседей.`)
+                    +comments('../../img/image2.svg',2,'Патрисия Стеклышкина','неделю назад',
+                    `Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
+                     И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто
+                     не жаловался из соседей.`)
+                    p Правила
+                    +warning
+                    div.nope
+                        p Отмена
+                        p.nope__body.
+                                    Бесплатная отмена в течение 48 ч. После
+                                    этого при отмене не позднее чем за 5 дн. 
+                                    до прибытия вы получите полный возврат 
+                                    за вычетом сбора за услуги.      
+                +pricelist(888,'9 990')           
             include ../../foothead/puggy/info/info.pug
-
+        
 
 
 
