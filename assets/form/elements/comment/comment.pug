@@ -14,7 +14,7 @@ mixin warning
             li.lister__el= point
 
 
-mixin comments(img,num,name, ago,comment)
+mixin comments(img,num,name, ago,comment,icon='favorite')
     div.commentblock
         div.userinfo
             img(src=img width="96px" height="96px")
@@ -23,7 +23,7 @@ mixin comments(img,num,name, ago,comment)
                 br
                 span.data__time #{ago}
         div.usercomment
-            +likebut(num)
+            +likebut(num,icon)
             span.usercomment__chater #{comment}
                                     
            

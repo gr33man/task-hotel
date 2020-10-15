@@ -97,6 +97,17 @@
     width: 320px;
     height: 169px;
 
+    @media (max-width:398px) {
+
+        width: 76%;
+        margin-top: 60px;
+        margin-left: 9.5%;
+        
+        & .elements {
+            width: 100%;
+        }
+     } 
+
     .done {
         display: flex;
         font-family: 'Montserrat';

@@ -3,6 +3,7 @@ import './form.scss';
 import img from '../img/image.svg';
 
 
+
 let dropexp = document.getElementsByClassName('dropexp')[0];
 let dropOne = dropexp.children[1].children[0].children[1].children[1];
 let dropTwo = dropexp.children[1].children[1].children[1].children[1];
