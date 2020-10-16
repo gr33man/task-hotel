@@ -11,6 +11,15 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
+function templatePug(name = 'landing') {
+    return new Html({
+        template: `./website/${name}/${name}.pug`,
+        minify: {
+            collapseWhitespace: isProd
+        }
+    })
+}
+
 let cssCompile = add => {
     let box = [{
         loader: cssExtract.loader,
@@ -36,7 +45,8 @@ module.exports = {
         landing: './website/landing/landing.js',
         registr: './website/registr/registr.js',
         signin: './website/signin/signin.js',
-        inroom: './website/inroom/inroom.js'
+        inroom: './website/inroom/inroom.js',
+        roomquest: './website/roomquest/roomquest.js'
     },
     output: {
         filename: '[name].js',
@@ -100,6 +110,13 @@ module.exports = {
         new Html({
             template: './website/inroom/inroom.pug',
             filename: 'inroom.html',
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './website/roomquest/roomquest.pug',
+            filename: 'roomquest.html',
             minify: {
                 collapseWhitespace: isProd
             }

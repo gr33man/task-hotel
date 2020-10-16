@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    @import '../../foothead/puggy/header1/header1.scss';
+    @import '../../foothead/puggy/info/info.scss';
+   
+    .contbox5 {
+        max-width: 1920px;
+    }    
+}    
