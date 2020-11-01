@@ -32,7 +32,7 @@ mixin reggaplag
             span.enter__text Уже есть аккаунт на Toxin
             +click('войти')         
 
-mixin rooms(num, price,feed,src, icon)
+mixin rooms(num, price,feed,src, digit,icon)
     div.room
         div.sphers
             - for (var x = 0; x < 4; x++)
@@ -43,7 +43,7 @@ mixin rooms(num, price,feed,src, icon)
             p.string &#8470; <span class="number">#{num}</span> <span class="lux">люкс</span> <span class="price">#{price}<i class="fa fa-rub" aria-hidden="true" style="font-size:12px;margin-left:1px;"></i></span> <span class="end">в сутки</span>
             hr
             div 
-                +ratebut('star')
+                +ratebut('star',digit)
                 <span class="price">#{feed}</span><span class="end">отзывов</span>
         if icon       
             <i class="fa fa-chevron-left arr" aria-hidden="true"></i>

@@ -4,11 +4,58 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width")
         link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        link(rel="stylesheet" href="../../node_modules/air-datepicker/dist/css/datepicker.min.css" type="text/css")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
         title гостиница Toxin
         include ../../form/elements/input/input.pug
         include ../../cards/login/login.pug
+        include ../../form/elements/shell/shell.pug
+        include ../../form/elements/check/check.pug
     body
         div.contbox5
-            include ../../foothead/puggy/header1/header1.pug 
+            include ../../foothead/puggy/header1/header1.pug
+            .coreblock
+                main.coreblock__rooms
+                    p.title Номера, которые мы для вас подобрали
+                    +rooms(888,'9 900',145,'./assets/img/room1.svg',5,'icon')
+                    +rooms(840,'9 900',65,'./assets/img/room2.svg',4) 
+                    +rooms(980,'8 500',35,'./assets/img/room3.svg',3) 
+                    +rooms(856,'7 300',19,'./assets/img/room4.svg',5)
+                    +rooms(740,'6 000',44,'./assets/img/room5.svg',4)
+                    +rooms(982,'5 800',56,'./assets/img/room6.svg',3)
+                    +rooms(678,'5 500',45,'./assets/img/room7.svg',5) 
+                    +rooms(450,'5 300',39,'./assets/img/room8.svg',4) 
+                    +rooms(350,'5 000',77,'./assets/img/room9.svg',3)
+                    +rooms(666,'5 000',25,'./assets/img/room10.svg',5)
+                    +rooms(444,'5 000',15,'./assets/img/room11.svg',3)
+                    +rooms(352,'5 000',55,'./assets/img/room12.svg',3)
+                    +pagebar 
+                aside.coreblock__panel
+                    +dropContMiddle('19 авг - 23 авг','даты пребывания в отеле')
+                    +dropContMiddle('3 гостя, 1 младенец','гости')
+                    div.boxslide
+                        span.boxslide__title диапазон цены 
+                        +slidebar
+                        span.boxslide__text Стоимость за сутки пребывания в номере
+                    div.homerule
+                        p.homerule__title правила дома
+                        +checkbody(['можно курить','можно с питомцами','Можно пригласить гостей (до 10 человек)'])
+                    div.success
+                        p.success__title доступность
+                        +checkbody(['широкий коридор','помощник для инвалидов'])
+                        span.discrip1 Ширина коридоров в номере не менее 91 см.
+                        span.discrip2  На 1 этаже вас встретит специалист и проводит до номера.
+                    +dropContMiddle('2 спальни 2 кровати...','удобства номера')
+                    +checkhead('дополнительные удобства','expand_more')
+                  
+
+
             include ../../foothead/puggy/info/info.pug
+
+
+
+
+        script(src="https://code.jquery.com/jquery-1.12.4.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        script(src="../../node_modules/air-datepicker/dist/js/datepicker.min.js")    

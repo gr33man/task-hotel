@@ -9,6 +9,7 @@ for (let i = 0; i < starbox.length; i++) {
 
         stars[j].addEventListener('click', function () {
             let index = j;
+            console.log(this)
 
             if (stars[j].innerHTML === 'star_border') {
 

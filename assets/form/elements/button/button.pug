@@ -4,15 +4,20 @@ mixin likebut(digit,icon="favorite")
         span.likes__digit= digit 
 
 
-mixin ratebut(icon="star_border")
+mixin ratebut(icon="star_border", digit)
+    -let num= 5-digit
     div.starbox
-        -for(i=0;i<5;i++)
+        -for(i=0;i<digit;i++)
             <i class="material-icons">#{icon}</i>
+
+        if num > 0
+            -for(i=0;i<num;i++)
+                <i class="material-icons">star_border</i>      
 
 
 mixin click(name,icon)
     if icon
-        button.btnclick #{name}  <i class="material-icons">#{icon}</i>            
+        button.btnclick(onclick="document.location.href = 'roomquest.html'") #{name}  <i class="material-icons">#{icon}</i>            
     else 
          button.btnclick= name
 

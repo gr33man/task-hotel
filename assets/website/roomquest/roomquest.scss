@@ -2,8 +2,157 @@ body {
     margin: 0;
     @import '../../foothead/puggy/header1/header1.scss';
     @import '../../foothead/puggy/info/info.scss';
+    @import '../../cards/login/login.scss';
+    @import '../../form/elements/shell/shell.scss';
+    @import '../../form/elements/check/check.scss';
    
     .contbox5 {
         max-width: 1920px;
+
+        & .header1 {
+           box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        }
+
+        .coreblock {
+            padding: 0 7.29%;
+            top: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+    
+            & .title {
+                width: 100%;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            
+            &__rooms {
+                display: flex;
+                flex-wrap: wrap;
+                width: 850px;
+                justify-content: space-between;
+
+                & .pagebox {
+                    position: relative;
+                    margin: 0 auto;
+                    margin-bottom: 120px;
+                    
+                }
+              
+                & .room {
+                    margin: 0 0 10px 0;
+                }
+
+            }
+
+            &__panel {
+                width: 266px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 760px;
+                margin-top: 25px;
+
+                & .boxslide {
+                    position: relative;
+                    height: 80px;
+
+                    & .slideset {
+                         position: absolute;
+                         top: 25px;
+                    }
+
+                    &__title {
+                        display: inline-block;
+                        position: absolute;
+                        font-family: 'Montserrat';
+                        font-weight: bold;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        color: #1F2041;
+                    }
+
+                    &__text {
+                        position: absolute;
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: rgba(31, 32, 65, 0.5);
+                        bottom: 0;
+
+
+                    }
+                }
+
+                & .homerule {
+                   
+                    & .checkmain {
+                        height: 90px;
+                    }
+
+                    &__title {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 15px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                & .success {
+                    position: relative;
+
+                    & .checkmain {
+                        height: 100px;
+                        padding-bottom: 40px;
+
+                        & .content {
+                            font-weight: bold;
+                            color: black;
+                        }
+                    }
+                    
+                    &__title {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 15px;
+                        text-transform: uppercase; 
+                    }
+
+                    & .discrip1 {
+                        font-family: 'Montserrat';
+                        font-size: 12px;
+                        line-height: 14px;
+                        width: 203px;
+                        height: 28px;
+                        display: inline-block;
+                        color: rgba(31, 32, 65, 0.5);
+                        position: absolute;
+                        top: 65px;
+                        left: 30px;
+                    }
+
+                    & .discrip2 {
+                        @extend .discrip1;
+                        top: 145px;
+                    }
+                }
+            }
+        }
+
+        & .footer1 {
+        border-top: 1px solid #E5E5E5;
+        }
+
+       
+
+        
     }    
 }    

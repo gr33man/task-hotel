@@ -83,12 +83,12 @@
         font-family: 'Montserrat';
         font-size: 13px;
         line-height: 15px;
+        width: 40%;
         text-transform: uppercase;
         position: absolute;
-        right: -50px;
         top: -25px;
+        right: -5px;
         color: rgba(31, 32, 65, 0.5);
-       
     }
 
     & #slider-range {
@@ -112,7 +112,6 @@
             background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
             margin-top: -1px;
             height: 8px;
-            
         }
      
      
@@ -173,6 +172,7 @@
         text-align: center;
         color: white;
     }
+    
     &__text {
         display: inline-block;
         position: absolute;

@@ -11,14 +11,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-function templatePug(name = 'landing') {
-    return new Html({
-        template: `./website/${name}/${name}.pug`,
-        minify: {
-            collapseWhitespace: isProd
-        }
-    })
-}
 
 let cssCompile = add => {
     let box = [{
@@ -75,10 +67,10 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'img/[name].[ext]'
-                }
+                    name: '[name].[ext]',
+                },
             }
-        ]
+        ],
     },
 
     devServer: {
