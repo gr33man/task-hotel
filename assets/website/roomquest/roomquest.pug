@@ -33,7 +33,9 @@ html(lang="en")
                     +pagebar 
                 aside.coreblock__panel
                     +dropContMiddle('19 авг - 23 авг','даты пребывания в отеле')
-                    +dropContMiddle('3 гостя, 1 младенец','гости')
+                    .box_adjust
+                        +dropCont('3 гостя, 1 младенец','гости')
+                        +expendedImprove(['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'], 'применить','очистить')
                     div.boxslide
                         span.boxslide__title диапазон цены 
                         +slidebar
@@ -46,8 +48,14 @@ html(lang="en")
                         +checkbody(['широкий коридор','помощник для инвалидов'])
                         span.discrip1 Ширина коридоров в номере не менее 91 см.
                         span.discrip2  На 1 этаже вас встретит специалист и проводит до номера.
-                    +dropContMiddle('2 спальни 2 кровати...','удобства номера')
-                    +checkhead('дополнительные удобства','expand_more')
+                    div.envir_room    
+                        +dropCont('2 спальни 2 кровати...','удобства номера')
+                        +expendedImprove(['CПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ'], 'применить','очистить')
+                    .box_dropdown
+                        +checkhead('дополнительные удобства','expand_more')
+                        +checkbody(['Завтрак','Писменный стол','Стул для крепления','Кроватка','Телевизор','Шампунь'])
+    
+
                   
 
 

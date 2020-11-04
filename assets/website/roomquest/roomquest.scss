@@ -9,6 +9,10 @@ body {
     .contbox5 {
         max-width: 1920px;
 
+        .vision{
+            display: flex !important;
+        }
+
         & .header1 {
            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         }
@@ -143,6 +147,48 @@ body {
                         @extend .discrip1;
                         top: 145px;
                     }
+                }
+
+                .box_adjust {
+                    position: relative;
+
+                    & .boxinp {
+                       width: 266px;
+
+                        &__input {
+                          width: 266px;
+                           
+                           & .dropblock {
+                             width: 266px;
+                           }
+                        }
+                    }
+
+                    & .droppyex{
+                        position: absolute;
+                        z-index: 3;
+                        width: 266px;
+                        display: none;
+                        top: 65px;
+
+                        & .elements{
+                            width: 100%;
+                        }
+                    }
+                } 
+                
+                .envir_room {
+                    @extend .box_adjust;
+                }   
+
+                & .box_dropdown {
+                    position: relative;
+
+                    & .checkmain {
+                        position: absolute;
+                        display: none;
+                    }
+
                 }
             }
         }

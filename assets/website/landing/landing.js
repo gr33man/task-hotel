@@ -27,7 +27,7 @@ let regisacc = document.getElementsByClassName('regisacc')[0];
 let logged = document.getElementsByClassName('logged')[0];
 
 
-let dropblock = document.getElementsByClassName('dropblock')[0];
+let dropblocks = document.getElementsByClassName('dropblock');
 let pluses = document.getElementsByClassName('elements__numbers__circle2');
 let mines = document.getElementsByClassName('elements__numbers__circle1');
 let nums = document.getElementsByClassName('elements__numbers__num');
@@ -110,16 +110,23 @@ if (cancel) {
     });
 }
 
-if (dropblock) {
-    dropblock.addEventListener('click', function () {
-        if (droppyex.style.display == 'flex') {
-            droppyex.style.display = 'none';
-        } else {
-            droppyex.style.display = 'flex';
-        }
+for (let dropblock of dropblocks) {
 
+    dropblock.addEventListener('click', function () {
+        let elem = this.parentElement.parentElement.nextElementSibling;
+        if (elem.className = "droppyex") {
+            if (elem.style.display == 'flex') {
+                elem.style.display = 'none';
+            } else {
+                elem.style.display = 'flex';
+            }
+        }
     });
 }
+
+
+
+
 
 if (ok) {
     ok.addEventListener('click', function () {
@@ -207,6 +214,7 @@ function dropChange(pars) {
     for (let par of pars) {
 
         par.addEventListener('click', function () {
+            let dropblock = this.closest('.droppyex').previousElementSibling.children[1].children[0];
 
             for (let num of nums) {
 
