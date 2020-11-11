@@ -5,6 +5,7 @@ body {
     @import '../../cards/login/login.scss';
     @import '../../form/elements/shell/shell.scss';
     @import '../../form/elements/check/check.scss';
+    @import '../../cards/calendar/calendar.scss';
    
     .contbox5 {
         max-width: 1920px;
@@ -58,6 +59,35 @@ body {
                 justify-content: space-between;
                 height: 760px;
                 margin-top: 25px;
+                padding-right: 5%;
+
+                & .box_roomquest {
+                    position: relative;
+
+                    & .datepicker-here {
+                        display: none;
+                        width: 266px;
+                        margin-top: 5px;
+
+                        & .butcont {
+                            width: 88%;
+                        }
+
+                        & .datepicker-inline {
+                            width: 100%;
+
+                            & .datepicker {
+                                width: 92%;
+                            }
+                        }
+   
+                    }
+                }
+
+                @media(max-width:999px) {
+                    display:none;
+                }
+
 
                 & .boxslide {
                     position: relative;

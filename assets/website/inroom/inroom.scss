@@ -304,6 +304,43 @@ body {
                 @media (max-width:589px) {
                    top: 1850px;
                 }
+                 
+                .droppyex {
+                    z-index: 5;
+
+                    & .elements {
+                        width: 100%;
+                    }
+
+                    @media (max-width:399px) {
+                        margin-top: -2px;
+                        width: 100%;
+                        margin-left: 0;
+                        
+                    }
+                }
+
+                @media(max-width: 399px) {
+                    & .box_inner {
+                        left: 10%;
+                        width: 80%;
+                        top: 8px;    
+
+                       & .boxinp {
+                           width: 100%;
+
+                           &__input {
+                               width: 100%;
+
+                               & .dropblock {
+                                   width: 100%;
+                               }
+                           }
+                       }
+                    }
+                } 
+
+                
             }
 
             .datepicker-here {
@@ -350,51 +387,6 @@ body {
 
                
             }
-
-            .droppyex {
-                position: absolute;
-                right: 20.24% + 1.65%;
-                top: 260px;
-                display: none;
-
-                @media (max-width:1699px) {
-                    right: calc(5% + 29px);
-                }
-
-                @media (max-width:1159px) {
-                    top: 1438px;
-                    left: calc(0px + 31px);
-                }
-
-                @media (max-width:759px) {
-                    top: 1640px;
-                }
-
-                @media (max-width:589px) {
-                    top: 2090px;
-                }
-
-                @media (max-width:399px) {
-                    top: 2145px;
-                    width: 78%;
-                    left: 39px;
-                   
-                    & .elements {
-                        width: 100%;
-                    }
-                }
-
-                @media (max-width:398px) {
-                    top: 2085px;
-                    width: 77.9%;
-                    left: 0.5%;
-                    
-                   
-                }
-                
-            } 
-
-            
 
         }
         

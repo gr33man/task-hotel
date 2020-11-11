@@ -41,10 +41,6 @@ body {
                         margin-left: 30px;
                     }
 
-                    .droppyex {
-                        left: 5.29% !important;
-                        margin-left: 30px;
-                    }
 
                     &__slogan {
                         right: 5.29% !important;
@@ -63,13 +59,22 @@ body {
                     }
 
                     .droppyex {
-                        left: 2% !important;
-                        margin-left: 30px;
                         z-index: 5;
 
                         & .elements {
                             width: 100%;
                         }
+
+                        @media (max-width:399px) {
+                            margin-top: -2px;
+                            width: 100%;
+                            margin-left: 0;
+                            
+                        }
+                    }
+
+                    &__slogan {
+                        right: 2% !important;
                     }
 
                     &__slogan {
@@ -90,23 +95,29 @@ body {
                     background-color: white;
                     top: 200px;
                     left: 140px;
+
+                    @media(max-width: 399px) {
+                        & .box_inner {
+                            left: 10%;
+                            width: 80%;
+                            margin-top: 8px;
+
+                           & .boxinp {
+                               width: 100%;
+
+                               &__input {
+                                   width: 100%;
+
+                                   & .dropblock {
+                                       width: 100%;
+                                   }
+                               }
+                           }
+                        }
+                    } 
+
                 } 
-
-                & .droppyex {
-                    position: absolute;
-                    top: 465px;
-                    left: 170px;
-                    display: none;
-
-                    @media (max-width: 399px) {
-                        margin-left: 30px;
-                    }
-
-                    @media (max-width: 398px) {
-                        margin-left: 9.5%;
-                    }
-
-                } 
+                
 
                 &__slogan {
                     width: 267px;

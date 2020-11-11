@@ -28,13 +28,11 @@ let logged = document.getElementsByClassName('logged')[0];
 
 
 let dropblocks = document.getElementsByClassName('dropblock');
-let pluses = document.getElementsByClassName('elements__numbers__circle2');
-let mines = document.getElementsByClassName('elements__numbers__circle1');
-let nums = document.getElementsByClassName('elements__numbers__num');
+let pluses = document.querySelectorAll('.elements__numbers__circle2');
+let mines = document.querySelectorAll('.elements__numbers__circle1');
 let sum = 0;
-let cancel = document.getElementsByClassName('cancel')[0];
-let ok = document.getElementsByClassName('ok')[0];
-let droppyex = document.getElementsByClassName('droppyex')[0];
+let cancels = document.getElementsByClassName('cancel');
+let oks = document.getElementsByClassName('ok');
 
 // код
 
@@ -99,22 +97,14 @@ if (clear) {
 dropChange(pluses);
 dropChange(mines);
 
-if (cancel) {
-    cancel.addEventListener('click', function () {
-        for (let num of nums) {
-            num.innerHTML = 0;
-            num.previousElementSibling.classList.add('disable_border');
-            num.previousElementSibling.children[0].classList.add('disable_color');
-            dropblock.children[0].innerHTML = 'Сколько гостей';
-        }
-    });
-}
+
 
 for (let dropblock of dropblocks) {
 
     dropblock.addEventListener('click', function () {
         let elem = this.parentElement.parentElement.nextElementSibling;
-        if (elem.className = "droppyex") {
+
+        if (elem.className == "droppyex") {
             if (elem.style.display == 'flex') {
                 elem.style.display = 'none';
             } else {
@@ -128,10 +118,30 @@ for (let dropblock of dropblocks) {
 
 
 
-if (ok) {
-    ok.addEventListener('click', function () {
-        droppyex.style.display = 'none';
-    });
+for (const ok of oks) {
+    if (ok) {
+        ok.addEventListener('click', function () {
+            ok.closest('.droppyex').style.display = 'none';
+        });
+    }
+}
+
+for (const cancel of cancels) {
+    if (cancel) {
+        cancel.addEventListener('click', function () {
+            let nums = cancel.parentElement.parentElement.getElementsByClassName('elements__numbers__num');
+
+            for (let num of nums) {
+                num.innerHTML = 0;
+                num.previousElementSibling.classList.add('disable_border');
+                num.previousElementSibling.children[0].classList.add('disable_color');
+            }
+            let drop_body = this.parentElement.parentElement;
+            drop_body.previousElementSibling.children[1].children[0].children[0].innerHTML = 'Сколько гостей';
+
+
+        });
+    }
 }
 
 // функции 
@@ -214,7 +224,8 @@ function dropChange(pars) {
     for (let par of pars) {
 
         par.addEventListener('click', function () {
-            let dropblock = this.closest('.droppyex').previousElementSibling.children[1].children[0];
+            let dropblock = this.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[0];
+            let nums = this.parentElement.parentElement.parentElement.getElementsByClassName('elements__numbers__num');
 
             for (let num of nums) {
 

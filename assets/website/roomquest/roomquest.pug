@@ -12,6 +12,7 @@ html(lang="en")
         include ../../cards/login/login.pug
         include ../../form/elements/shell/shell.pug
         include ../../form/elements/check/check.pug
+        include ../../cards/calendar/calendar.pug
     body
         div.contbox5
             include ../../foothead/puggy/header1/header1.pug
@@ -32,7 +33,9 @@ html(lang="en")
                     +rooms(352,'5 000',55,'./assets/img/room12.svg',3)
                     +pagebar 
                 aside.coreblock__panel
-                    +dropContMiddle('19 авг - 23 авг','даты пребывания в отеле')
+                    .box_roomquest
+                        +dropContMiddle('19 авг - 23 авг','даты пребывания в отеле')
+                        +calendar
                     .box_adjust
                         +dropCont('3 гостя, 1 младенец','гости')
                         +expendedImprove(['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'], 'применить','очистить')
