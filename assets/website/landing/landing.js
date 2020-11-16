@@ -14,7 +14,7 @@ let blocktext = document.getElementsByClassName('blocktext')[0];
 let links = document.getElementsByClassName('links')[0];
 let arrive = document.getElementsByClassName('dropblockshort')[0];
 let embred = document.getElementsByClassName('dropblockshort')[1];
-let calendar = document.getElementsByClassName('datepicker-here')[0];
+let calendar = document.querySelector('.datepicker-here');
 let click = 1;
 let clear = document.getElementsByClassName('clear')[0];
 let confirm = document.getElementsByClassName('confirm')[0];
@@ -76,7 +76,7 @@ $('.datepicker-here').datepicker({
 
 dinamicDrop('elements__numbers__circle1', 'elements__numbers__circle2', 'elements__numbers__num');
 
-if (calendar) calendar.addEventListener('click', changeFirstData);
+if (calendar && calendar.parentElement.className != 'box_roomquest') calendar.addEventListener('click', changeFirstData);
 
 if (confirm) {
     confirm.addEventListener('click', function () {
@@ -89,6 +89,7 @@ if (clear) {
         let origin = 'ДД.ММ.ГГГГ';
         arrive.children[0].innerHTML = origin;
         embred.children[0].innerHTML = origin;
+
     });
 }
 
@@ -194,7 +195,7 @@ function calUp(elem) {
 
         } else {
             calendar.style.display = 'block';
-            droppyex.style.display = 'none';
+            //droppyex.style.display = 'none';
         }
 
 
@@ -227,29 +228,68 @@ function dropChange(pars) {
             let dropblock = this.parentElement.parentElement.parentElement.previousElementSibling.children[1].children[0];
             let nums = this.parentElement.parentElement.parentElement.getElementsByClassName('elements__numbers__num');
 
-            for (let num of nums) {
 
-                sum += parseInt(num.innerHTML);
-            }
 
-            if (nums[2].innerHTML == 0) {
-                if (sum == 1) {
-                    dropblock.children[0].innerHTML = sum + ' гость';
-                } else if (sum == 2 || sum == 3 || sum == 4) {
-                    dropblock.children[0].innerHTML = sum + ' гостя';
-                } else {
-                    dropblock.children[0].innerHTML = sum + ' гостей';
+
+
+
+
+
+            const title = this.parentElement.previousElementSibling;
+            if (title.innerHTML === 'ВЗРОСЛЫЕ' || title.innerHTML === 'ДЕТИ' || title.innerHTML === 'МЛАДЕНЦЫ') {
+
+                for (let num of nums) {
+
+                    sum += parseInt(num.innerHTML);
                 }
+
+                if (nums[2].innerHTML == 0) {
+                    if (sum == 1) {
+                        dropblock.children[0].innerHTML = sum + ' гость';
+                    } else if (sum == 2 || sum == 3 || sum == 4) {
+                        dropblock.children[0].innerHTML = sum + ' гостя';
+                    } else {
+                        dropblock.children[0].innerHTML = sum + ' гостей';
+                    }
+                } else {
+                    if (sum == 1) {
+                        dropblock.children[0].innerHTML = sum + ' гость' + ' ' + nums[2].innerHTML + ' ' + 'младенец';
+                    } else if (sum == 2 || sum == 3 || sum == 4) {
+                        dropblock.children[0].innerHTML = sum + ' гостя' + ' ' + nums[2].innerHTML + ' ' + 'младенца';
+                    } else {
+                        dropblock.children[0].innerHTML = sum + ' гостей' + ' ' + nums[2].innerHTML + ' ' + 'младенцев';
+                    }
+
+                }
+                sum = 0;
             } else {
-                if (sum == 1) {
-                    dropblock.children[0].innerHTML = sum + ' гость' + ' ' + nums[2].innerHTML + ' ' + 'младенец';
-                } else if (sum == 2 || sum == 3 || sum == 4) {
-                    dropblock.children[0].innerHTML = sum + ' гостя' + ' ' + nums[2].innerHTML + ' ' + 'младенца';
+
+                if (nums[2].innerHTML == 0 && nums[1].innerHTML == 0) {
+                    if (nums[0].innerHTML == 1) {
+                        dropblock.children[0].innerHTML = nums[0].innerHTML + ' спальня';
+                    } else if (nums[0].innerHTML == 2 || nums[0].innerHTML == 3 || nums[0].innerHTML == 4) {
+                        dropblock.children[0].innerHTML = nums[0].innerHTML + ' спальни';
+
+                    } if (nums[0].innerHTML == 0) {
+                        dropblock.children[0].innerHTML = 'выберите номер';
+                    } else {
+                        dropblock.children[0].innerHTML = nums[0].innerHTML + ' спален';
+                    }
+
+                } else if (nums[2].innerHTML == 0) {
+                    if (nums[1].innerHTML == 1) {
+                        dropblock.children[0].innerHTML = nums[0].innerHTML + ' спальня' + ' ' + nums[1].innerHTML + ' ' + 'кровать';
+                    } else if (nums[1].innerHTML == 2 || nums[1].innerHTML == 3 || nums[1].innerHTML == 4) {
+                        dropblock.children[0].innerHTML = nums[0].innerHTML + ' спальня' + ' ' + nums[1].innerHTML + ' ' + 'кровати';
+                    } else {
+                        dropblock.children[0].innerHTML = nums[0].innerHTML + ' спальня' + ' ' + nums[1].innerHTML + ' ' + 'кроватей';
+                    }
                 } else {
-                    dropblock.children[0].innerHTML = sum + ' гостей' + ' ' + nums[2].innerHTML + ' ' + 'младенцев';
+                    dropblock.children[0].innerHTML = nums[0].innerHTML + ' спальня' + ' ' + nums[1].innerHTML + ' ' + 'кров.' + ' ' + nums[2].innerHTML + ' ' + 'ван. ком.';
                 }
             }
-            sum = 0;
+
+
 
         });
 
