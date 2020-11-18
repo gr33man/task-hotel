@@ -1,5 +1,8 @@
 import './landing.scss';
 import dinamicDrop from '../../form/elements/input/input.js';
+import 'air-datepicker/dist/js/datepicker.min.js';
+import 'air-datepicker/dist/css/datepicker.min.css';
+
 
 // данные
 

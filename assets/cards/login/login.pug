@@ -38,7 +38,7 @@ mixin rooms(num, price,feed,src, digit,icon)
             - for (var x = 0; x < 4; x++)
                 div.sphers__point
                 
-        img(src=src)
+        img(src=src onclick="document.location.href = 'inroom.html'")
         div.room__stat
             p.string &#8470; <span class="number">#{num}</span> <span class="lux">люкс</span> <span class="price">#{price}<i class="fa fa-rub" aria-hidden="true" style="font-size:12px;margin-left:1px;"></i></span> <span class="end">в сутки</span>
             hr
