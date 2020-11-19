@@ -1,5 +1,28 @@
 import './roomquest.scss';
+import room1 from '../../img/room1.svg';
+import room2 from '../../img/room2.svg';
+import room3 from '../../img/room3.svg';
+import room4 from '../../img/room4.svg';
+import room5 from '../../img/room5.svg';
+import room6 from '../../img/room6.svg';
+import room7 from '../../img/room7.svg';
+import room8 from '../../img/room8.svg';
+import room9 from '../../img/room9.svg';
+import room10 from '../../img/room10.svg';
+import room11 from '../../img/room11.svg';
+import room12 from '../../img/room12.svg';
+
+
+
 let clack = 0;
+let coreblock = document.getElementsByClassName('coreblock')[0];
+
+if (coreblock) {
+    document.getElementsByClassName('burger')[0].addEventListener('click', function () {
+        coreblock.classList.toggle('gap');
+
+    });
+}
 
 
 
@@ -60,4 +83,3 @@ function toggleFunc(elem) {
         this.nextElementSibling.classList.toggle('vision');
     });
 }
-

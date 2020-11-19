@@ -460,45 +460,47 @@
         display: flex;
         justify-content: space-between;
         
-
-        & .namelist {
-            font-family: 'Montserrat';
-            font-size: 14px;
-            line-height: 20px;
-            color: rgba(31, 32, 65, 0.75);
-           
-          
-        }
-
-        & .circle {
-            width: 20px;
-            height: 20px;
-            border: 1px solid rgba(31, 32, 65, 0.25);
-            border-radius: 50px;
-            box-sizing: border-box;
-            display: inline-block;
-            text-align: center;
-            font-size: 12px;
-            font-weight: bold;
-            color: rgba(31, 32, 65, 0.5);
-            position: absolute;
-            margin-left: 5px;
-        }
-
-        & .circle:nth-child(1) {
-            margin-left: 32px;
-
-            @media (max-width:399px) {
-                margin-left: 5px;
-            }
-        }
         
         & .priceitems {
-            width: 236px;
-            height: 104px;
+            width: 226px;
+            //height: 104px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            & .namelist {
+                font-family: 'Montserrat';
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(31, 32, 65, 0.75);
+
+                & .circle {
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid rgba(31, 32, 65, 0.25);
+                    border-radius: 50px;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: rgba(31, 32, 65, 0.5);
+                    position: absolute;
+                    margin-left: 5px;
+                }
+
+                & .circle:nth-child(1) {
+                    margin-left: 32px;
+                    
+                    @media (max-width:399px) {
+                        margin-left: 5px;
+                    }
+        
+                    @media (max-width:324px) {
+                        margin-left: 10px;
+                    }
+                }
+            }
         }
 
         & .pricescores {
@@ -511,6 +513,10 @@
 
             & .namelist {
                 text-align: right;
+                font-family: 'Montserrat';
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(31, 32, 65, 0.75);
             }
         }
 

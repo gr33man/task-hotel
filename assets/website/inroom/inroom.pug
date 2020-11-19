@@ -4,7 +4,6 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width")
         link( rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
-        link(rel="stylesheet" href="../../node_modules/air-datepicker/dist/css/datepicker.min.css" type="text/css")
         script(src="https://use.fontawesome.com/ff88c31cb5.js")
         link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
         title гостиница Toxin
@@ -49,11 +48,11 @@ html(lang="en")
                             span Разочарован
                 div.roomdata__reviews
                     p Отзывы посетителей номера <span>2 отзыва</span>
-                    +comments('./assets/img/image.svg',12,'Мурад Сарафанов','5 дней назад',
+                    +comments('image.svg',12,'Мурад Сарафанов','5 дней назад',
                     `Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
                      И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто
                      не жаловался из соседей.`)
-                    +comments('./assets/img/image2.svg',2,'Патрисия Стеклышкина','неделю назад',
+                    +comments('image2.svg',2,'Патрисия Стеклышкина','неделю назад',
                     `Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
                      И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто
                      не жаловался из соседей.`,'favorite_border')
@@ -78,4 +77,4 @@ html(lang="en")
 
         script(src="https://code.jquery.com/jquery-1.12.4.js")
         script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-        script(src="../../node_modules/air-datepicker/dist/js/datepicker.min.js")
+        
