@@ -1,4 +1,8 @@
 import './landing.scss';
+import '../roomquest/roomquest.js';
+import '../inroom/inroom.js';
+import '../signin/signin.js';
+import '../registr/registr.js';
 import dinamicDrop from '../../form/elements/input/input.js';
 import 'air-datepicker/dist/js/datepicker.min.js';
 import 'air-datepicker/dist/css/datepicker.min.css';
@@ -53,9 +57,6 @@ burger.onclick = function () {
     if (logged) logged.classList.toggle('chrest');
     btn1.classList.toggle('chrest');
 }
-
-
-
 
 btn_log.innerHTML = 'ВОЙТИ';
 btn_reg.innerHTML = 'ЗАРЕГИСТРИРОВАТЬСЯ';
@@ -119,6 +120,10 @@ for (let dropblock of dropblocks) {
 }
 
 
+
+closeDrop2('.box_adjust', '.box_adjust .droppyex');
+closeDrop2('.envir_room', '.envir_room .droppyex');
+closeDrop2('.box_inner', '.box_inner .droppyex');
 
 
 
@@ -298,3 +303,21 @@ function dropChange(pars) {
 
     }
 }
+
+export default function closeDrop(tag, elem, prop) {
+    window.addEventListener('click', function (e) {
+        if (!e.target.closest(tag) && document.querySelector(elem)) {
+            document.querySelector(elem).classList.remove(prop);
+        }
+    });
+}
+
+function closeDrop2(tag, elem) {
+    window.addEventListener('click', function (e) {
+        let el = document.querySelector(elem);
+
+        if (!e.target.closest(tag) && el) {
+            el.style.display = 'none';
+        }
+    });
+} 

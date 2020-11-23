@@ -11,25 +11,48 @@ import room9 from '../../img/room9.svg';
 import room10 from '../../img/room10.svg';
 import room11 from '../../img/room11.svg';
 import room12 from '../../img/room12.svg';
+import 'air-datepicker/dist/js/datepicker.min.js';
+import 'air-datepicker/dist/css/datepicker.min.css';
+import closeDrop from '../landing/landing.js';
 
 
 
 let clack = 0;
 let coreblock = document.getElementsByClassName('coreblock')[0];
-
-if (coreblock) {
-    document.getElementsByClassName('burger')[0].addEventListener('click', function () {
-        coreblock.classList.toggle('gap');
-
-    });
-}
-
-
-
+let filter = document.getElementsByClassName('adapbut')[0];
 let checkclose = document.getElementsByClassName('checkclose')[0];
 let roomquest = document.getElementsByClassName('box_roomquest')[0];
 
 
+if (filter) {
+    let dropblock = document.getElementsByClassName('envir_room')[0].getElementsByClassName('dropblock')[0];
+    filter.addEventListener('click', function () {
+
+        coreblock.children[1].classList.toggle('vision');
+    });
+
+    if (checkclose) {
+        checkclose.addEventListener('click', function () {
+
+            coreblock.children[0].classList.toggle('gap2');
+
+        });
+    }
+
+    if (dropblock) {
+        dropblock.addEventListener('click', function () {
+            coreblock.children[0].classList.toggle('gap3');
+        });
+    }
+
+
+    if (coreblock) {
+        document.getElementsByClassName('burger')[0].addEventListener('click', function () {
+            coreblock.classList.toggle('gap');
+
+        });
+    }
+}
 
 if (roomquest) {
     roomquest.children[0].addEventListener('click', function () {
@@ -69,17 +92,15 @@ if (roomquest) {
 
 }
 
-
-
-
-if (checkclose) toggleFunc(checkclose);
-
-
-
-
+if (checkclose) {
+    toggleFunc(checkclose);
+    closeDrop('.box_dropdown', '.checkmain.vision', 'vision')
+}
 
 function toggleFunc(elem) {
     elem.addEventListener('click', function () {
         this.nextElementSibling.classList.toggle('vision');
     });
 }
+
+

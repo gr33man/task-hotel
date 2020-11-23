@@ -20,6 +20,20 @@ body {
             } 
         }
 
+
+        @media (max-width:998px) {
+            .gap2 {
+                padding-top: 300px;
+            } 
+        }
+
+        @media (max-width:998px) {
+            .gap3 {
+                padding-top: 100px;
+            } 
+        }
+ 
+
         & .header1 {
            box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
         }
@@ -32,13 +46,36 @@ body {
             flex-direction: row-reverse;
             justify-content: space-between;
 
-           
+            
+           @media(max-width:999px) {
+              flex-direction: column-reverse;
+              
+           }             
+
+            & .adapbut {
+                width: 90%;
+                height: 50px;
+                border-radius: 5px;
+                display: none;
+                margin: 0 auto;
+                outline: none;
+                background-color:#9b8cf0;
+                border: none;
+                font-size: 20px;
+                color: white;
+                margin-top: 40px;
+
+                @media(max-width:999px) {
+                    display:block;
+                }
+            }
     
             & .title {
                 width: 100%;
                 font-family: 'Quicksand', sans-serif;
                 font-size: 24px;
                 font-weight: 700;
+                text-align: center;
             }
             
             &__rooms {
@@ -47,13 +84,29 @@ body {
                 width: 850px;
                 justify-content: space-between;
 
-                @media (max-width:1328px) {
+                @media(max-width:1328px) {
                     width: 700px;
                 }
 
-                @media (max-width:633px) {
-                   width: 500px;
+                @media(max-width:999px) {
+                    margin: 0 auto;
+                    width: 90%;
+                    
                 }
+
+                @media(max-width:699px) {
+                    width: 100%;
+                }
+
+
+                @media(max-width:634px) {
+                    width: 90%;
+                }
+
+                @media(max-width:334px) {
+                    width: 100%;
+                }
+
 
                 & .pagebox {
                     position: relative;
@@ -65,7 +118,7 @@ body {
                 & .room {
                     margin: 0 0 10px 0;
 
-                    @media (max-width:633px) {
+                    @media (max-width:635px) {
                         margin: 0 auto;
                     }
                 }
@@ -83,6 +136,14 @@ body {
 
                 & .box_roomquest {
                     position: relative;
+
+                    & .boxinp {
+                        width: 266px;
+
+                        &__input {
+                            width: 100%;
+                        }
+                    }
 
                     & .datepicker-here {
                         display: none;
@@ -105,8 +166,12 @@ body {
                 }
 
                 @media(max-width:999px) {
-                    display:none;
+                   display:none;
+                   margin: 0 auto;
+                   margin-top: 30px;
                 }
+
+                
 
 
                 & .boxslide {
@@ -206,10 +271,10 @@ body {
                        width: 266px;
 
                         &__input {
-                          width: 266px;
+                          width: 100%;
                            
                            & .dropblock {
-                             width: 266px;
+                             width: 100%;
                            }
                         }
                     }
@@ -217,9 +282,16 @@ body {
                     & .droppyex{
                         position: absolute;
                         z-index: 3;
-                        width: 266px;
+                        width: 100%;//266px;
                         display: none;
                         top: 65px;
+                        right: 0;
+
+                        @media(max-width:399px) {
+                            top: 5px;
+                            right: 0;
+                        } 
+                
 
                         & .elements{
                             width: 100%;

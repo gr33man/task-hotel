@@ -34,11 +34,7 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        landing: './website/landing/landing.js',
-        registr: './website/registr/registr.js',
-        signin: './website/signin/signin.js',
-        inroom: './website/inroom/inroom.js',
-        roomquest: './website/roomquest/roomquest.js'
+        app: './website/landing/landing.js'
     },
     output: {
         filename: '[name].js',

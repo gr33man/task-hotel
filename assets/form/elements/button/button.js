@@ -52,6 +52,9 @@ $(function () {
             $("#amount").val(ui.values[0] + "P - " + ui.values[1] + "P");
         }
     });
+
     $("#amount").val($("#slider-range").slider("values", 0) + "P - " +
         $("#slider-range").slider("values", 1) + "P");
 });
+
+
