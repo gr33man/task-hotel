@@ -29,7 +29,7 @@ for (let i = 0; i < starbox.length; i++) {
 
 export function like() {
     let likepluses = document.getElementsByClassName('likes');
-
+    console.log('hel')
     for (const like of likepluses) {
         like.addEventListener('click', function () {
             if (like.children[0].innerHTML == 'favorite') {

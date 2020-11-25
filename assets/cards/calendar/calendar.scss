@@ -75,7 +75,7 @@
 
             &--nav-action:nth-child(1)::after {
                 content: '';
-                background-image: url("../../img/arrow_back.svg");
+                background-image: url("../img/arrow_back.svg");
                 width: 24px;
                 font-size: 12px;
                 height: 24px;
@@ -85,7 +85,7 @@
 
             &--nav-action:nth-child(3)::after {
                 content: '';
-                background-image: url("../../img/arrow_forward.svg");
+                background-image: url("../img/arrow_forward.svg");
                 width: 24px;
                 font-size: 12px;
                 height: 24px;

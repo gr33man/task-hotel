@@ -1,7 +1,8 @@
 import './form.pug';
 import './form.scss';
 import img from '../img/image.svg';
-
+import './elements/button/button.js';
+import { like } from './elements/button/button.js';
 
 
 let dropexp = document.getElementsByClassName('dropexp')[0];
@@ -25,8 +26,6 @@ let togbut = document.getElementsByClassName('togbut')[0].children[1].children[0
 
 let star1 = document.getElementsByClassName('starbox')[0].children;
 let star2 = document.getElementsByClassName('starbox')[1].children;
-
-
 
 for (let i = 0; i < star1.length - 1; i++) {
     star1[i].innerHTML = 'star';
@@ -54,5 +53,5 @@ for (let i = 0; i < double1.length; i++) {
 
 }
 
-
+like();
 

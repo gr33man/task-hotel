@@ -34,7 +34,11 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        app: './website/landing/landing.js'
+        app: './website/landing/landing.js',
+        foothead: './foothead/foothead.js',
+        coltype: './coltype/coltype.js',
+        cards: './cards/cards.js',
+        form: './form/form.js'
     },
     output: {
         filename: '[name].js',
@@ -77,6 +81,7 @@ module.exports = {
     plugins: [
         new Html({
             template: './website/landing/landing.pug',
+            chunks: ['app'],
             minify: {
                 collapseWhitespace: isProd
             }
@@ -84,6 +89,7 @@ module.exports = {
         new Html({
             template: './website/registr/registr.pug',
             filename: 'registr.html',
+            chunks: ['app'],
             minify: {
                 collapseWhitespace: isProd
             }
@@ -91,6 +97,7 @@ module.exports = {
         new Html({
             template: './website/signin/signin.pug',
             filename: 'signin.html',
+            chunks: ['app'],
             minify: {
                 collapseWhitespace: isProd
             }
@@ -98,6 +105,7 @@ module.exports = {
         new Html({
             template: './website/inroom/inroom.pug',
             filename: 'inroom.html',
+            chunks: ['app'],
             minify: {
                 collapseWhitespace: isProd
             }
@@ -105,6 +113,39 @@ module.exports = {
         new Html({
             template: './website/roomquest/roomquest.pug',
             filename: 'roomquest.html',
+            chunks: ['app'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './foothead/foothead.pug',
+            filename: 'foothead.html',
+            chunks: ['foothead'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './coltype/coltype.pug',
+            filename: 'coltype.html',
+            chunks: ['coltype'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './cards/cards.pug',
+            filename: 'cards.html',
+            chunks: ['cards'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new Html({
+            template: './form/form.pug',
+            filename: 'form.html',
+            chunks: ['form'],
             minify: {
                 collapseWhitespace: isProd
             }

@@ -7,7 +7,6 @@ import dinamicDrop from '../../form/elements/input/input.js';
 import 'air-datepicker/dist/js/datepicker.min.js';
 import 'air-datepicker/dist/css/datepicker.min.css';
 
-
 // данные
 
 let bars = document.getElementsByClassName('bar1__el1');
@@ -153,7 +152,7 @@ for (const cancel of cancels) {
     }
 }
 
-// функции 
+// функции
 
 function changeFirstData(e) {
     let t = e.target;
@@ -320,4 +319,4 @@ function closeDrop2(tag, elem) {
             el.style.display = 'none';
         }
     });
-} 
+}
