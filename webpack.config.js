@@ -43,7 +43,7 @@ module.exports = {
         form: './form/form.js'
     },
     output: {
-        filename: '[name].js',
+        filename: './[name]/[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
 
