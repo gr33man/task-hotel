@@ -42,6 +42,7 @@
     height: 443px;
     background: #FFFFFF;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    
 
     @media (max-width:998px ) {
         .navigation,.about,.support,.postup {
@@ -193,7 +194,7 @@
 
         & a i {
             position: absolute;
-            width: 44px;//44px;
+            width: 24px;//44px;
             height: 44px;
             bottom: -10px;
             left:7.29% + 77%;//227px;
@@ -221,9 +222,13 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 50px;
-        border: 1px solid #E5E5E5;
-    
+        border-top: 1px solid #E5E5E5;
+        
+        
+        @media(min-width:499px) {
+            height: 50px;
+        }
+ 
 
         & p{
             position: absolute;
