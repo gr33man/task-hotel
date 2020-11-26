@@ -164,14 +164,19 @@
     box-sizing: border-box;
 }
 
+.inp[type="text"] {
+    padding: 15px;
+}
+
 .inp:focus {
     outline: none;
+    font-family: 'Montserrat';
+
 }
 
 .inp::placeholder{
     font-size: 14px;
     font-family: 'Montserrat';
-    padding-left: 15px;
 }
 
 

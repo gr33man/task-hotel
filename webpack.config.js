@@ -2,6 +2,7 @@ const path = require('path');
 const Html = require('html-webpack-plugin');
 const cssExtract = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
 
 
@@ -13,6 +14,7 @@ const isProd = !isDev;
 
 
 let cssCompile = add => {
+
     let box = [{
         loader: cssExtract.loader,
         options: {
@@ -20,7 +22,7 @@ let cssCompile = add => {
             reloadAll: true
         }
     },
-        'css-loader'
+        'css-loader',
     ]
 
     if (add) box.push(add);
@@ -34,7 +36,7 @@ let cssCompile = add => {
 module.exports = {
     context: path.resolve(__dirname, './assets'),
     entry: {
-        app: './website/landing/landing.js',
+        app: './index.js',
         foothead: './foothead/foothead.js',
         coltype: './coltype/coltype.js',
         cards: './cards/cards.js',
@@ -52,7 +54,7 @@ module.exports = {
                 loader: 'pug-loader'
             },
             {
-                test: /\.s[cs]ss$/,
+                test: /\.s[ac]ss$/,
                 use: cssCompile('sass-loader')
             },
             {
@@ -61,13 +63,16 @@ module.exports = {
             },
             {
                 test: /\.(ttf|eof|woff|woff2|otf)$/,
-                loader: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    name: './fonts/[name].[ext]',
+                },
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
+                    name: './img/[name].[ext]',
                 },
             }
         ],
@@ -76,6 +81,15 @@ module.exports = {
     devServer: {
         port: 5000,
         hot: isDev
+    },
+
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                test: /\.js(\?.*)?$/i,
+            }),
+        ]
     },
 
     plugins: [
