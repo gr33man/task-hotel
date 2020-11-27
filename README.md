@@ -1,4 +1,4 @@
-# task-hotel
+# hotel TOXIN
 
 [гостиница toxin](https://gr33man.github.io/task-hotel/)
 &nbsp;&nbsp;[выбор номера](https://gr33man.github.io/task-hotel/roomquest.html)
