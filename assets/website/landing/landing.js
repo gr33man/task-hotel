@@ -307,6 +307,8 @@ export default function closeDrop(tag, elem, prop) {
     window.addEventListener('click', function (e) {
         if (!e.target.closest(tag) && document.querySelector(elem)) {
             document.querySelector(elem).classList.remove(prop);
+            if (document.querySelector('.coreblock').children[0].classList.contains('gap2'))
+                document.querySelector('.coreblock').children[0].classList.remove('gap2');
         }
     });
 }
