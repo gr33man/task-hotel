@@ -130,6 +130,7 @@ for (const ok of oks) {
     if (ok) {
         ok.addEventListener('click', function () {
             ok.closest('.droppyex').style.display = 'none';
+            document.querySelector('.coreblock').children[0].classList.remove('gap3');
         });
     }
 }
@@ -314,11 +315,15 @@ export default function closeDrop(tag, elem, prop) {
 }
 
 function closeDrop2(tag, elem) {
-    window.addEventListener('click', function (e) {
-        let el = document.querySelector(elem);
-
-        if (!e.target.closest(tag) && el) {
-            el.style.display = 'none';
-        }
-    });
+    let el = document.querySelector(elem);
+    if (elem) {
+        window.addEventListener('click', function (e) {
+            if (!e.target.closest(tag) && el) {
+                el.style.display = 'none';
+            }
+        });
+    }
 }
+
+
+

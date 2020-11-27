@@ -41,18 +41,25 @@ if (filter) {
 
     if (dropblock) {
         dropblock.addEventListener('click', function () {
-            coreblock.children[0].classList.toggle('gap3');
+            this.closest('.coreblock').children[0].classList.toggle('gap3');
         });
     }
 
-
-    if (coreblock) {
-        document.getElementsByClassName('burger')[0].addEventListener('click', function () {
-            coreblock.classList.toggle('gap');
-
-        });
-    }
 }
+
+window.addEventListener('click', function (e) {
+    if (!e.target.closest('.envir_room') && document.querySelector('.envir_room .droppyex').style.display == 'flex') {
+        document.querySelector('.coreblock').children[0].classList.remove('gap3');
+    }
+});
+
+if (coreblock) {
+    document.getElementsByClassName('burger')[0].addEventListener('click', function () {
+        coreblock.classList.toggle('gap');
+
+    });
+}
+
 
 if (roomquest) {
     roomquest.children[0].addEventListener('click', function () {
