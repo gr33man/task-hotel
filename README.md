@@ -1,9 +1,9 @@
 # task-hotel
 
-[гостиница toxin](https://gr33man.github.io/task-hotel/) 
-[выбор номера](https://gr33man.github.io/task-hotel/roomquest.html)
-[аппартаменты](https://gr33man.github.io/task-hotel/inroom.html)
-[вход](https://gr33man.github.io/task-hotel/signin.html)
+[гостиница toxin](https://gr33man.github.io/task-hotel/)
+&nbsp;[выбор номера](https://gr33man.github.io/task-hotel/roomquest.html)
+&nbsp;[аппартаменты](https://gr33man.github.io/task-hotel/inroom.html)
+&nbsp;[вход](https://gr33man.github.io/task-hotel/signin.html)
 [ренистрация](https://gr33man.github.io/task-hotel/registr.html)
 
 
